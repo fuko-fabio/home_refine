@@ -62,6 +62,9 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 					<span data-customizer="copyright-credit"><?php printf( '%s <a href="%s" title="%s" target="_blank">%s</a>.', __( 'Theme:', 'illdy' ), esc_url( 'http://colorlib.com/wp/themes/illdy' ), __( 'Illdy', 'illdy' ), __( 'Illdy', 'illdy' ) ); ?></span>
 				</p>
 				<span><?php echo illdy_sanitize_html( $footer_copyright ); ?></span>
+				<a target="_blank" href="http://npsoftware.pl" title="nps software" class="author">
+					<span class="cname">nps</span><span class="csoftware"> software</span>
+				</a>
 			</div><!--/.col-sm-3-->
 		</div><!--/.row-->
 	</div><!--/.container-->
