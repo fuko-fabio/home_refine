@@ -116,7 +116,7 @@ input {
 
 #header .top-header {
 	width: 100%;
-	background: #121212;
+	background: #007e65;
 	position: fixed;
 	z-index: 9999;
 }
@@ -923,7 +923,7 @@ input {
 
 #contact-us {
 	width: 100%;
-	background-color: #dda06f;
+	background-color: #c57c00;
 	padding: 40px 0 50px 0;
 	text-align: center;
 }
@@ -1165,7 +1165,7 @@ input {
 /* 11. Footer */
 #footer {
 	width: 100%;
-	background-color: #f5f5f5;
+	background-color: #007e65;
 	padding: 40px 0;
 }
 
@@ -1189,14 +1189,19 @@ input {
 	height: auto;
 }
 
+#footer .author {
+	display: block;
+	color: #fff;
+}
+
 #footer .copyright {
 	width: 100%;
 	line-height: 0.933;
-	color: #888;
+	color: #fff;
 }
 
 #footer .copyright a {
-	color: #888;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -1215,7 +1220,7 @@ input {
 
 #footer .widget .widget-title h3 {
 	line-height: 1.15;
-	color: #888;
+	color: #fff;
 }
 
 #footer .widget ul li {
@@ -1232,7 +1237,7 @@ input {
 
 #footer .widget ul li a {
 	line-height: 1.5;
-	color: #888;
+	color: #fff;
 }
 
 #footer .widget ul li a:hover {
@@ -1240,7 +1245,7 @@ input {
 }
 
 #footer .widget ul li:before {
-	color: #888;
+	color: #fff;
 }
 
 /* 12. Blog */
@@ -2280,14 +2285,14 @@ input[type=submit] {
 
 	.responsive-menu ul li {
 		width: 100%;
+		background: #c57000;
 	}
 
 	.responsive-menu ul li a {
 		width: 100%;
 		padding: 15px;
 		display: block;
-		border-bottom: 1px solid #e4e4e4;
-		color: #000;
+		color: #fff;
 		text-align: center;
 	}
 
