@@ -2373,12 +2373,6 @@ input[type=submit] {
 		width: 50%;
 	}
 
-	#contact-us .section-content .col-sm-5,
-	#contact-us .section-content .col-sm-4,
-	#contact-us .section-content .col-sm-3 {
-		margin-top: 40px;
-	}
-
 	#contact-us .section-content .contact-us-social {
 		text-align: left;
 	}
