@@ -107,11 +107,6 @@ input {
 /* 02. Header */
 #header {
 	width: 100%;
-	background-position: center 50px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 
 #header .top-header {
@@ -119,6 +114,7 @@ input {
 	background: #007e65;
 	position: fixed;
 	z-index: 9999;
+	top: 0;
 }
 
 #header .top-header .header-logo {
@@ -130,6 +126,11 @@ input {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	float: left;
+}
+
+#header .top-header .header-logo-img {
+	max-height: 54px;
+	padding: 4px 0;
 }
 
 #header .top-header .header-logo:hover {
@@ -223,7 +224,7 @@ input {
 }
 
 #header .top-header .header-navigation ul li a {
-	color: #fff;
+	color: #ffde00;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
@@ -237,10 +238,15 @@ input {
 
 #header .bottom-header {
 	width: 100%;
-	padding-top: 120px;
-	padding-bottom: 80px;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.5);
+	padding-top: 40px;
+	text-align: right;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-top: 54px;
+	min-height: 500px
 }
 
 #header .bottom-header.blog {
@@ -252,25 +258,23 @@ input {
 }
 
 #header .bottom-header h2 {
-	margin: 0 0 50px 0;
+	margin: 0 0 10px 0;
 	line-height: 0.74;
 	font-weight: 900;
-	font-size: 60px;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-#header .bottom-header span.span-dot {
-	color: #ffde00;
+	font-size: 40px;
+	color: #000;
+	text-align: right;
 }
 
 #header .bottom-header p {
 	line-height: 1.6;
 	margin-bottom: 60px;
-	font-size: 15px;
-	color: #fff;
+	font-size: 20px;
+	color: #000;
 }
-
+#header .bottom-header .bottom-header-logo-img {
+	width: 100%;
+}
 #header .bottom-header .header-button-one {
 	width: auto;
 	height: 63px;
@@ -2312,6 +2316,10 @@ input[type=submit] {
 	#header .top-header .header-logo img {
 		max-width: 320px;
 	}
+	
+	#header .bottom-header .bottom-header-logo-img {
+		display: none;
+}	}
 
 	#header .bottom-header h2 {
 		font-size: 40px;
