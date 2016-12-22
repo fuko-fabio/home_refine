@@ -2374,6 +2374,7 @@ input[type=submit] {
 	}
 
 	#contact-us .section-content .col-sm-5,
+	#contact-us .section-content .col-sm-4,
 	#contact-us .section-content .col-sm-3 {
 		margin-top: 40px;
 	}
@@ -2400,10 +2401,6 @@ input[type=submit] {
 
 	#footer .col-sm-3 {
 		margin-top: 40px;
-	}
-
-	#footer .col-sm-3:first-child {
-		margin-top: 0;
 	}
 
 	#sidebar {
