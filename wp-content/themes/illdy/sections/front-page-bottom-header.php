@@ -27,7 +27,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 	$second_button_url     = get_theme_mod( 'illdy_jumbotron_general_second_button_url' );
 }
 
-$jumbotron_general_image   = get_theme_mod( 'illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' ) );
+$jumbotron_general_image   = get_theme_mod( 'illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' ) );
 
 $style = '';
 
@@ -62,7 +62,7 @@ if ( $first_row_from_title || $second_row_from_title || $third_row_from_title ||
 		<div class="container">
 			<div class="row">
 				<?php if ( $first_row_from_title || $second_row_from_title || $third_row_from_title ): ?>
-					<div class="col-sm-10">
+					<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 bottom-header-info-box">
 						<h2><?php if ( $first_row_from_title ) {
 								echo '<span data-customizer="first-row-from-title">' . illdy_sanitize_html( $first_row_from_title ) . '</span>';
 							} ?>
@@ -77,19 +77,14 @@ if ( $first_row_from_title || $second_row_from_title || $third_row_from_title ||
 						<?php if ( $entry ): ?>
 							<p><?php echo illdy_sanitize_html( $entry ); ?></p>
 						<?php endif; ?>
+						<?php if ( $first_button_title ): ?>
+							<a href="<?php echo esc_url( $first_button_url ); ?>" title="<?php echo esc_attr( $first_button_title ); ?>" class="header-button-one"><?php echo esc_html( $first_button_title ); ?></a>
+						<?php endif; ?>
+						<?php if ( $second_button_title ): ?>
+							<a href="<?php echo esc_url( $second_button_url ); ?>" title="<?php echo esc_attr( $second_button_title ); ?>" class="header-button-two"><?php echo esc_html( $second_button_title ); ?></a>
+						<?php endif; ?>
 					</div><!--/.col-sm-10-->
-					<div class="col-sm-2">
-						<?php echo '<a href="' . esc_url( home_url() ) . '"><img class="bottom-header-logo-img" src="' . esc_url_raw( get_template_directory_uri() . '/layout/images/logo-small.png' ) . '" /></a>'; ?>
-					</div><!--/.col-sm-2-->
 				<?php endif; ?>
-				<div class="col-sm-10">
-					<?php if ( $first_button_title ): ?>
-						<a href="<?php echo esc_url( $first_button_url ); ?>" title="<?php echo esc_attr( $first_button_title ); ?>" class="header-button-one"><?php echo esc_html( $first_button_title ); ?></a>
-					<?php endif; ?>
-					<?php if ( $second_button_title ): ?>
-						<a href="<?php echo esc_url( $second_button_url ); ?>" title="<?php echo esc_attr( $second_button_title ); ?>" class="header-button-two"><?php echo esc_html( $second_button_title ); ?></a>
-					<?php endif; ?>
-				</div><!--/.col-sm-10-->
 			</div><!--/.row-->
 		</div><!--/.container-->
 	</div><!--/.bottom-header.front-page-->

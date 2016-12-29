@@ -10,7 +10,7 @@
 $logo_id                   = get_theme_mod( 'custom_logo' );
 $logo_image                = wp_get_attachment_image_src( $logo_id, 'full' );
 $text_logo                 = get_theme_mod( 'illdy_text_logo', __( 'Illdy', 'illdy' ) );
-$jumbotron_general_image   = get_theme_mod( 'illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' ) );
+$jumbotron_general_image   = get_theme_mod( 'illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' ) );
 $jumbotron_single_image    = get_theme_mod( 'illdy_jumbotron_enable_featured_image', false );
 $jumbotron_parallax_enable = get_theme_mod( 'illdy_jumbotron_enable_parallax_effect', true );
 $preloader_enable          = get_theme_mod( 'illdy_preloader_enable', 1 );

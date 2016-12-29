@@ -57,9 +57,8 @@ input {
 	width: 100%;
 }
 
-.front-page-section .section-header h3 {
-	margin: 0 0 30px 0;
-	line-height: 0.6;
+.front-page-section .section-header h3,
+.front-page-section .section-content h3 {
 	font-weight: 900;
 	font-size: 30px;
 	color: #000;
@@ -75,6 +74,11 @@ input {
 
 .front-page-section .section-content {
 	width: 100%;
+}
+
+.front-page-section .section-content ul }
+	list-style-type: none;
+	padding: 0;
 }
 
 .no-padding {
@@ -238,7 +242,7 @@ input {
 
 #header .bottom-header {
 	width: 100%;
-	padding-top: 40px;
+	padding-top: 240px;
 	text-align: right;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -246,7 +250,17 @@ input {
 	-o-background-size: cover;
 	background-size: cover;
 	margin-top: 54px;
-	min-height: 500px
+	min-height: 600px
+}
+
+#header .bottom-header .bottom-header-info-box {
+    background: rgba(0,0,0,0.7);
+    border: 3px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 #header .bottom-header.blog {
@@ -262,15 +276,14 @@ input {
 	line-height: 0.74;
 	font-weight: 900;
 	font-size: 40px;
-	color: #000;
-	text-align: right;
+	color: #fff;
 }
 
 #header .bottom-header p {
-	line-height: 1.6;
+	line-height: 38px;
 	margin-bottom: 60px;
-	font-size: 20px;
-	color: #000;
+	font-size: 30px;
+	color: #fff;
 }
 #header .bottom-header .bottom-header-logo-img {
 	width: 100%;

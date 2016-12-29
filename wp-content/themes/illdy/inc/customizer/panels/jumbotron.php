@@ -34,7 +34,7 @@ $wp_customize->add_section( $prefix . '_jumbotron_general', array(
 // Image
 $wp_customize->add_setting( $prefix . '_jumbotron_general_image', array(
 	'sanitize_callback' => 'esc_url_raw',
-	'default'           => esc_url_raw( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' ),
+	'default'           => esc_url_raw( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' ),
 	'transport'         => 'postMessage',
 ) );
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $prefix . '_jumbotron_general_image', array(
