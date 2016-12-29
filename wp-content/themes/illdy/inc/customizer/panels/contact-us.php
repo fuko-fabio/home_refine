@@ -399,6 +399,25 @@ $wp_customize->add_control(
         )
     );
 
+    /* mobile phone number */
+    $wp_customize->add_setting( $prefix.'_mobile',
+        array(
+            'sanitize_callback'  => 'illdy_sanitize_html',
+            'default'            => __( '(555) 555-5555', 'illdy' ),
+            'transport'          => 'postMessage'
+        )
+    );
+
+    $wp_customize->add_control( $prefix.'_mobile',
+        array(
+            'label'         => __( 'Mobile phone number', 'illdy' ),
+            'description'   => __( 'Will be displayed in the contact section from front page.', 'illdy'),
+            'section'       => $prefix.'_general_contact_section',
+            'settings'      => $prefix.'_mobile',
+            'priority'      => 12
+        )
+    );
+	
     // Address 1
     $wp_customize->add_setting(
         $prefix . '_address1',
@@ -433,6 +452,44 @@ $wp_customize->add_control(
         $prefix . '_address2',
         array(
             'label'         => __( 'Address 2', 'illdy' ),
+            'description'   => __( 'Will be displayed in the contact section from front page.', 'illdy'),
+            'section'       => $prefix . '_general_contact_section',
+            'priority'      => 13
+        )
+    );
+	// Address 3
+    $wp_customize->add_setting(
+        $prefix . '_address3',
+        array(
+            'sanitize_callback'  => 'illdy_sanitize_html',
+            'default'            => __( 'London, UK', 'illdy' ),
+            'transport'          => 'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        $prefix . '_address3',
+        array(
+            'label'         => __( 'Address 3', 'illdy' ),
+            'description'   => __( 'Will be displayed in the contact section from front page.', 'illdy'),
+            'section'       => $prefix . '_general_contact_section',
+            'priority'      => 13
+        )
+    );
+	// Address 4
+    $wp_customize->add_setting(
+        $prefix . '_address4',
+        array(
+            'sanitize_callback'  => 'illdy_sanitize_html',
+            'default'            => __( 'London, UK', 'illdy' ),
+            'transport'          => 'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        $prefix . '_address4',
+        array(
+            'label'         => __( 'Address 4', 'illdy' ),
             'description'   => __( 'Will be displayed in the contact section from front page.', 'illdy'),
             'section'       => $prefix . '_general_contact_section',
             'priority'      => 13

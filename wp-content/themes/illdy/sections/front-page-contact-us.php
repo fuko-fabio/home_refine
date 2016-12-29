@@ -17,8 +17,11 @@ $contact_bar_pinterest_url = get_theme_mod( 'illdy_contact_bar_pinterest_url' );
 $contact_bar_instagram_url = get_theme_mod( 'illdy_contact_bar_instagram_url' );
 $email                     = get_theme_mod( 'illdy_email' );
 $phone                     = get_theme_mod( 'illdy_phone' );
+$mobile                    = get_theme_mod( 'illdy_mobile' );
 $address1                  = get_theme_mod( 'illdy_address1' );
 $address2                  = get_theme_mod( 'illdy_address2' );
+$address3                  = get_theme_mod( 'illdy_address3' );
+$address4                  = get_theme_mod( 'illdy_address4' );
 $general_title             = get_theme_mod( 'illdy_contact_us_general_title' );
 $general_entry             = get_theme_mod( 'illdy_contact_us_general_entry' );
 $general_contact_form_7    = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
@@ -69,6 +72,12 @@ if ( $general_title != '' || $general_entry != '' || $general_address_title != '
 										<?php if ( $address2 ): ?>
 											<span class="box-right-row" data-customizer="contact-us-address-2"><?php echo illdy_sanitize_html( $address2 ); ?></span>
 										<?php endif; ?>
+										<?php if ( $address3 ): ?>
+											<span class="box-right-row" data-customizer="contact-us-address-3"><?php echo illdy_sanitize_html( $address3 ); ?></span>
+										<?php endif; ?>
+										<?php if ( $address4 ): ?>
+											<span class="box-right-row" data-customizer="contact-us-address-4"><?php echo illdy_sanitize_html( $address4 ); ?></span>
+										<?php endif; ?>
 									</div><!--/.box-right-->
 								</div><!--/.contact-us-box-->
 							</div><!--/.col-sm-4-->
@@ -86,6 +95,9 @@ if ( $general_title != '' || $general_entry != '' || $general_address_title != '
 										<?php endif; ?>
 										<?php if ( $phone ): ?>
 											<span class="box-right-row" data-customizer="contact-us-phone"><?php _e( 'Phone:', 'illdy' ); ?><?php echo illdy_sanitize_html( $phone ); ?></span>
+										<?php endif; ?>
+										<?php if ( $mobile ): ?>
+											<span class="box-right-row" data-customizer="contact-us-phone"><?php _e( 'Mobile:', 'illdy' ); ?><?php echo illdy_sanitize_html( $mobile ); ?></span>
 										<?php endif; ?>
 									</div><!--/.box-right-->
 								</div><!--/.contact-us-box-->
