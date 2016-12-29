@@ -7,7 +7,7 @@
  *             * @TODO: https://developer.wordpress.org/reference/functions/get_the_archive_title/
  */
 ?>
-<div class="bottom-header blog">
+<div class="bottom-header blog" style="<?php echo get_header_background_style() ?>">
 	<div class="container">
 		<div class="row">
 			<?php if ( is_page_template( 'page-templates/blog.php' ) || is_singular() ): ?>
