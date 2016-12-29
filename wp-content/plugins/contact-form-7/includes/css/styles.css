@@ -37,6 +37,7 @@ div.wpcf7-validation-errors {
 
 .wpcf7-form-control-wrap {
 	position: relative;
+	clear: both;
 }
 
 span.wpcf7-not-valid-tip {
