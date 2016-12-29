@@ -249,6 +249,8 @@ input {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+#header .bottom-header.front-page {
 	min-height: 600px
 }
 
@@ -938,7 +940,7 @@ input {
 
 #contact-us {
 	width: 100%;
-	background-color: #007e6;
+	background-color: #007e65;
 	padding: 40px 0 50px 0;
 	text-align: center;
 }
@@ -988,11 +990,11 @@ input {
 	display: block;
 	line-height: 1.6;
 	font-size: 15px;
-	color: #fee3bf;
+	color: #eee;
 }
 
 #contact-us .section-content .contact-us-box .box-right span a {
-	color: #fee3bf;
+	color: #eee;
 	text-decoration: none;
 }
 
@@ -1092,9 +1094,9 @@ input {
 #contact-us .section-content .wpcf7-form p .wpcf7-text {
 	width: 100%;
 	height: 46px;
-	background-color: #df955b;
+	background-color: #2EA18A;
 	padding: 0 20px;
-	border: 1px solid #d08b55;
+	border: none;
 	outline: 0;
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 15px;
@@ -1121,10 +1123,10 @@ input {
 #contact-us .section-content .wpcf7-form p .wpcf7-textarea {
 	width: 100%;
 	height: 217px;
-	background-color: #df955b;
+	background-color: #2EA18A;
 	margin: 0;
 	padding: 10px 20px 10px 20px;
-	border: 1px solid #d08b55;
+	border: none;
 	outline: 0;
 	resize: none;
 	display: block;
@@ -1156,7 +1158,7 @@ input {
 	border-radius: 2px;
 	display: inline-block;
 	font-weight: 700;
-	color: #e69f67;
+	color: #000;
 	text-transform: uppercase;
 	float: right;
 	-webkit-transition: all 0.3s;
