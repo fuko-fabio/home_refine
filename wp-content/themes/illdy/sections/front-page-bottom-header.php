@@ -18,7 +18,6 @@ $second_button_url     = get_theme_mod( 'illdy_jumbotron_general_second_button_u
 
 
 if ( $first_row_from_title || $second_row_from_title || $third_row_from_title || $entry || $first_button_title || $second_button_title ) {
-echo get_header_background_style();
 ?>
 	<div class="bottom-header front-page" style="<?php echo get_header_background_style() ?>">
 		<div class="container">

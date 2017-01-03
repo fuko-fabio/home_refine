@@ -7,15 +7,9 @@
  */
 ?>
 <?php
-if ( current_user_can( 'edit_theme_options' ) ) {
-	$general_title = get_theme_mod( 'illdy_testimonials_general_title', __( 'Testimonials', 'illdy' ) );
-	$general_background_image = get_theme_mod( 'illdy_testimonials_general_background_image', '' );
-	$number_of_posts = get_theme_mod( 'illdy_testimonials_number_of_posts', absint( 4 ) );
-}else{
-	$general_title = get_theme_mod( 'illdy_testimonials_general_title' );
-	$general_background_image = get_theme_mod( 'illdy_testimonials_general_background_image' );
-	$number_of_posts = get_theme_mod( 'illdy_testimonials_number_of_posts', absint( 4 ) );	
-}
+$general_title = get_theme_mod( 'illdy_testimonials_general_title' );
+$general_background_image = get_theme_mod( 'illdy_testimonials_general_background_image' );
+$number_of_posts = get_theme_mod( 'illdy_testimonials_number_of_posts', absint( 4 ) );	
 
 $jetpack_testimonial_query_args = array (
 	'post_type'					=> array( 'jetpack-testimonial' ),

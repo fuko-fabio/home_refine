@@ -7,14 +7,8 @@
  */
 ?>
 <?php
-if ( current_user_can( 'edit_theme_options' ) ) {
-	$general_title = get_theme_mod( 'illdy_projects_general_title', esc_html__( 'Projects', 'illdy' ) );
-	$general_entry = get_theme_mod( 'illdy_projects_general_entry', esc_html__( 'You\'ll love our work. Check it out!', 'illdy' ) );
-}else{
-	$general_title = get_theme_mod( 'illdy_projects_general_title' );
-	$general_entry = get_theme_mod( 'illdy_projects_general_entry' );
-}
-
+$general_title = get_theme_mod( 'illdy_projects_general_title' );
+$general_entry = get_theme_mod( 'illdy_projects_general_entry' );
 ?>
 
 <?php if ( $general_title != '' || $general_entry != '' || is_active_sidebar( 'front-page-projects-sidebar' ) ) { ?>

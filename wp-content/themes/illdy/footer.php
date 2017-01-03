@@ -51,7 +51,7 @@ $img_footer_logo   = get_theme_mod( 'illdy_img_footer_logo' );
 				<?php endif; ?>
 				-->
 				<span class="copyright"><?php echo illdy_sanitize_html( $footer_copyright ); ?></span>
-				<a target="_blank" href="http://npsoftware.pl" title="nps software" class="author">
+				<a target="_blank" href="http://npsoftware.eu" title="nps software" class="author">
 					<span class="cname">nps</span><span class="csoftware"> software</span>
 				</a>
 			</div><!--/.col-sm-3-->

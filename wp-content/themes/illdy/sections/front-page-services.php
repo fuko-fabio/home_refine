@@ -7,14 +7,8 @@
  */
 ?>
 <?php
-if ( current_user_can( 'edit_theme_options' ) ) {
-	$services_general_title = get_theme_mod( 'illdy_services_general_title', __( 'Services', 'illdy' ) );
-	$services_general_entry = get_theme_mod( 'illdy_services_general_entry', __( 'In order to help you grow your business, our carefully selected experts can advise you in in the following areas:', 'illdy' ) );
-}else{
-	$services_general_title = get_theme_mod( 'illdy_services_general_title' );
-	$services_general_entry = get_theme_mod( 'illdy_services_general_entry' );
-}
-
+$services_general_title = get_theme_mod( 'illdy_services_general_title' );
+$services_general_entry = get_theme_mod( 'illdy_services_general_entry' );
 ?>
 
 <?php if ( $services_general_title != '' || $services_general_entry != '' || is_active_sidebar( 'front-page-services-sidebar' ) ) { ?>
