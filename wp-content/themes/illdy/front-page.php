@@ -106,5 +106,29 @@ else:
 		illdy_sections_order( $sections_order_eighth_section );
 	endif;
 endif;
+?>
 
-get_footer(); ?>
+<section class="front-page-section" id="static-page-links">
+	<div class="section-content-after">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="javascript:void(0);">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/dps.png' ); ?>" />
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="javascript:void(0);">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/tpo.png' ); ?>" />
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="javascript:void(0);">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/lrs.jpg' ); ?>" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php get_footer(); ?>

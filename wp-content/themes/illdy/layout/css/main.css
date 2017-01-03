@@ -76,9 +76,31 @@ input {
 	width: 100%;
 }
 
-.front-page-section .section-content ul }
+.front-page-section .section-content ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+.front-page-section .section-content-after {
+	padding:20px 0;	
+}
+
+.front-page-section .section-content-after .col-sm-4 {
+	height: 180px;
+	position: relative;
+}
+
+.front-page-section .section-content-after img {
+	max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
 }
 
 .no-padding {
@@ -242,7 +264,7 @@ input {
 
 #header .bottom-header {
 	width: 100%;
-	padding-top: 240px;
+	padding-top: 200px;
 	text-align: right;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -1002,11 +1024,13 @@ input {
 	text-decoration: underline;
 }
 
+#footer .contact-us-social,
 #contact-us .section-content .contact-us-social {
 	width: 100%;
 	text-align: right;
 }
 
+#footer .contact-us-social a,
 #contact-us .section-content .contact-us-social a {
 	margin-left: 15px;
 	font-size: 17px;
@@ -1017,27 +1041,34 @@ input {
 	transition: all 0.3s;
 }
 
+#footer .contact-us-social a:hover,
 #contact-us .section-content .contact-us-social a:hover {
 	color: #333;
 }
 
+#footer .contact-us-social a:first-child,
 #contact-us .section-content .contact-us-social a:first-child {
 	margin-left: 0;
 }
 
+#footer .contact-us-social a > img,
 #contact-us .section-content .contact-us-social a > img {
 	width: 70px;
 }
 
+#footer .contact-us-social a:hover img.wechat-code,
 #contact-us .section-content .contact-us-social a:hover img.wechat-code {
 	display: block;
 }
+
+#footer .contact-us-social a > img.wechat-code,
 #contact-us .section-content .contact-us-social a > img.wechat-code {
     position: absolute;
     right: 0;
     width: 320px;
     z-index: 10;
     display: none;
+    bottom: 100%
 }
  
 #contact-us .section-content .wpcf7-form {
