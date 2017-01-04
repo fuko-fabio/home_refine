@@ -36,7 +36,7 @@ $contact_bar_instagram_url = get_theme_mod( 'illdy_contact_bar_instagram_url' );
 						<a href="<?php echo esc_url( $contact_bar_linkedin_url ); ?>" title="<?php _e( 'LinkedIn', 'illdy' ); ?>" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/linkedin.png' ); ?>" /></a>
 					<?php endif; ?>
 					<?php if ( $contact_bar_googlep_url ): ?>
-						<a href="<?php echo esc_url( $contact_bar_googlep_url ); ?>" title="<?php _e( 'Google+', 'illdy' ); ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+						<a href="<?php echo esc_url( $contact_bar_googlep_url ); ?>" title="<?php _e( 'Google+', 'illdy' ); ?>" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/google-plus.png' ); ?>" /></a>
 					<?php endif; ?>
 					<?php if ( $contact_bar_pinterest_url ): ?>
 						<a href="<?php echo esc_url( $contact_bar_pinterest_url ); ?>" title="<?php _e( 'Pinterest', 'illdy' ); ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
