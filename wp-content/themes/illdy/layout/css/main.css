@@ -1091,8 +1091,8 @@ textarea, input {
 	margin-left: 0;
 }
 
-#footer .contact-us-social a>img, #contact-us .section-content .contact-us-social a>img
-	{
+#footer .contact-us-social a > img,
+#contact-us .section-content .contact-us-social a > img {
 	width: 50px;
 }
 
@@ -1101,15 +1101,15 @@ textarea, input {
 	display: block;
 }
 
-#footer .contact-us-social a>img.wechat-code, #contact-us .section-content .contact-us-social a>img.wechat-code
-	{
-	position: absolute;
-	right: 0;
-	width: 320px;
-	z-index: 10;
-	display: none;
-	bottom: 100%;
-	border: 1px solid #000;
+#footer .contact-us-social a > img.wechat-code,
+#contact-us .section-content .contact-us-social a > img.wechat-code {
+    position: absolute;
+    right: 0;
+    width: 320px;
+    z-index: 10;
+    display: none;
+    bottom: 100%
+    border: 1px solid #000;
 }
 
 #contact-us .section-content .wpcf7-form {
