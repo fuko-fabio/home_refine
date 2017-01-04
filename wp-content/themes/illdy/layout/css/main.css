@@ -1053,7 +1053,7 @@ input {
 
 #footer .contact-us-social a > img,
 #contact-us .section-content .contact-us-social a > img {
-	width: 70px;
+	width: 50px;
 }
 
 #footer .contact-us-social a:hover img.wechat-code,
@@ -1068,7 +1068,8 @@ input {
     width: 320px;
     z-index: 10;
     display: none;
-    bottom: 100%
+    bottom: 100%;
+    border: 1px solid #000;
 }
  
 #contact-us .section-content .wpcf7-form {
