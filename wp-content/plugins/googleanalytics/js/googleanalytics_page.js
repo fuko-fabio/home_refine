@@ -2,6 +2,10 @@ const GA_ACCESS_CODE_MODAL_ID = "ga_access_code_modal";
 const GA_ACCESS_CODE_TMP_ID = "ga_access_code_tmp";
 const GA_ACCESS_CODE_ID = "ga_access_code";
 const GA_FORM_ID = "ga_form";
+const GA_MODAL_CLOSE_ID = 'ga_close';
+const GA_MODAL_BTN_CLOSE_ID = 'ga_btn_close';
+const GA_GOOGLE_AUTH_BTN_ID = 'ga_authorize_with_google_button';
+const GA_SAVE_ACCESS_CODE_BTN_ID = 'ga_save_access_code';
 
 (function ($) {
 
@@ -10,7 +14,7 @@ const GA_FORM_ID = "ga_form";
         authorize: function (e, url) {
             e.preventDefault();
             ga_popup.url = url;
-            $('#' + GA_ACCESS_CODE_MODAL_ID).appendTo("body").modal('show');
+            $('#' + GA_ACCESS_CODE_MODAL_ID).appendTo("body").show();
             ga_popup.open();
         },
         open: function () {
@@ -32,6 +36,15 @@ const GA_FORM_ID = "ga_form";
             }
         }
     };
+
+    ga_modal = {
+        hide: function () {
+            $('#' + GA_ACCESS_CODE_MODAL_ID).hide();
+            ga_loader.hide();
+            $('#' + GA_SAVE_ACCESS_CODE_BTN_ID).removeAttr('disabled');
+        }
+    };
+
     ga_events = {
 
         click: function (selector, callback) {
@@ -58,13 +71,12 @@ const GA_FORM_ID = "ga_form";
             $('#ga_manually_wrapper').toggle();
         },
         initModalEvents: function () {
-            $('#' + GA_ACCESS_CODE_MODAL_ID).on('shown.bs.modal', function () {
+            $('#' + GA_GOOGLE_AUTH_BTN_ID).on('click', function () {
                 $('#' + GA_ACCESS_CODE_TMP_ID).focus();
             });
 
-            $('#' + GA_ACCESS_CODE_MODAL_ID).on('hide.bs.modal', function () {
-                ga_loader.hide();
-                $('#ga_save_access_code').removeAttr('disabled');
+            $('#' + GA_MODAL_CLOSE_ID + ', #' + GA_MODAL_BTN_CLOSE_ID).on('click', function () {
+                ga_modal.hide();
             });
         }
     };

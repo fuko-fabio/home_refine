@@ -91,8 +91,16 @@ class Ga_Lib_Api_Client {
 			}
 		} catch ( Ga_Lib_Api_Client_Exception $e ) {
 			$this->add_error( $e );
+
+			return new Ga_Lib_Api_Response( Ga_Lib_Api_Response::$empty_response );
 		} catch ( Ga_Lib_Api_Request_Exception $e ) {
 			$this->add_error( $e );
+
+			return new Ga_Lib_Api_Response( Ga_Lib_Api_Response::$empty_response );
+		} catch ( Exception $e ) {
+			$this->add_error( $e );
+
+			return new Ga_Lib_Api_Response( Ga_Lib_Api_Response::$empty_response );
 		}
 	}
 
@@ -235,7 +243,8 @@ class Ga_Lib_Api_Client {
 	 */
 	public function refresh_access_token( $refresh_token ) {
 		// Request for a new Access Token
-		$response = $this->ga_auth_refresh_access_token( $refresh_token );
+		$response = $this->call( 'ga_auth_refresh_access_token', array( $refresh_token ) );
+
 		Ga_Admin::save_access_token( $response, $refresh_token );
 
 		// Set new access token
@@ -253,6 +262,8 @@ class Ga_Lib_Api_Client {
 			try {
 				$this->check_access_token();
 			} catch ( Ga_Lib_Api_Client_Exception $e ) {
+				$this->add_error( $e );
+			} catch ( Exception $e ) {
 				$this->add_error( $e );
 			}
 		}

@@ -53,7 +53,8 @@ class Ga_Helper {
 	public static function is_plugin_page() {
 		$site = get_current_screen();
 
-		return preg_match( '/' . GA_NAME . '/', $site->base );
+		return preg_match( '/' . GA_NAME . '/i', $site->base ) || preg_match( '/' . GA_NAME . '/i',
+				$_SERVER['REQUEST_URI'] );
 	}
 
 	/**

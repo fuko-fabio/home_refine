@@ -1,22 +1,21 @@
-<div id="ga_access_code_modal" class="modal fade" tabindex="-1" role="dialog" style="z-index: 1000000">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title"><?php _e( 'Please paste the access code obtained from Google below:' ) ?></h4>
+<div id="ga_access_code_modal" class="ga-modal" tabindex="-1">
+    <div class="ga-modal-dialog">
+        <div class="ga-modal-content">
+            <div class="ga-modal-header">
+                <span id="ga_close" class="ga-close">&times;</span>
+                <h4 class="ga-modal-title"><?php _e( 'Please paste the access code obtained from Google below:' ) ?></h4>
             </div>
-            <div class="modal-body">
+            <div class="ga-modal-body">
                 <label for="ga_access_code"><strong><?php _e( 'Access Code' ); ?></strong>:</label>
-                &nbsp;<input id="ga_access_code_tmp" type="text" style="width: 350px"
+                &nbsp;<input id="ga_access_code_tmp" type="text"
                              placeholder="<?php _e( 'Paste your access code here' ) ?>"/>
                 <div class="ga-loader-wrapper">
                     <div class="ga-loader"></div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"
+            <div class="ga-modal-footer">
+                <button id="ga_btn_close" type="button" class="button"><?php _e( 'Close' ); ?></button>
+                <button type="button" class="button-primary"
                         id="ga_save_access_code"
                         onclick="ga_popup.saveAccessCode( event )"><?php _e( 'Save Changes' ); ?></button>
             </div>
@@ -44,7 +43,7 @@
                             </label>
                         </th>
                         <td <?php echo ( ! Ga_Helper::are_terms_accepted() ) ? 'class="ga-tooltip"' : ''; ?>>
-                            <button id="ga_authorize_with_google_button" class="btn btn-primary"
+                            <button id="ga_authorize_with_google_button" class="button-primary"
 	                            <?php if ( Ga_Helper::are_terms_accepted() ) : ?>
                                     onclick="ga_popup.authorize( event, '<?php echo esc_attr( $data['popup_url'] ); ?>' )"
 	                            <?php endif; ?>

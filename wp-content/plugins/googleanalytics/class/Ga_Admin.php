@@ -291,18 +291,6 @@ class Ga_Admin {
 	}
 
 	/**
-	 * Adds Bootstrap scripts.
-	 */
-	public static function enqueue_bootstrap() {
-		wp_register_script( GA_NAME . '-bootstrap-js', GA_PLUGIN_URL . '/js/bootstrap.min.js', array(
-			'jquery'
-		) );
-		wp_register_style( GA_NAME . '-bootstrap-css', GA_PLUGIN_URL . '/css/bootstrap.min.css', false, null, 'all' );
-		wp_enqueue_script( GA_NAME . '-bootstrap-js' );
-		wp_enqueue_style( GA_NAME . '-bootstrap-css' );
-	}
-
-	/**
 	 * Adds JS scripts for the settings page.
 	 */
 	public static function enqueue_ga_scripts() {
@@ -317,7 +305,12 @@ class Ga_Admin {
 	 */
 	public static function enqueue_ga_css() {
 		wp_register_style( GA_NAME . '-css', GA_PLUGIN_URL . '/css/' . GA_NAME . '.css', false, null, 'all' );
+		wp_register_style( GA_NAME . '-additional-css', GA_PLUGIN_URL . '/css/ga_additional.css', false, null, 'all' );
 		wp_enqueue_style( GA_NAME . '-css' );
+		wp_enqueue_style( GA_NAME . '-additional-css' );
+
+		wp_register_style( GA_NAME . '-modal-css', GA_PLUGIN_URL . '/css/ga_modal.css', false, null, 'all' );
+		wp_enqueue_style( GA_NAME . '-modal-css' );
 	}
 
 	/**
@@ -351,7 +344,6 @@ class Ga_Admin {
 		}
 
 		if ( Ga_Helper::is_plugin_page() ) {
-			self::enqueue_bootstrap();
 			self::enqueue_ga_scripts();
 		}
 	}
@@ -500,10 +492,10 @@ class Ga_Admin {
 	}
 
 	public static function init_oauth() {
-		// $code = ! empty( $_GET['code'] ) ? $_GET['code'] : null;
+
 		$code = Ga_Helper::get_option( self::GA_OAUTH_AUTH_CODE_OPTION_NAME );
 
-		if ( ! Ga_Helper::is_authorized() && $code ) {
+		if ( ! Ga_Helper::is_authorized() && ! empty( $code ) ) {
 			Ga_Helper::update_option( self::GA_OAUTH_AUTH_CODE_OPTION_NAME, "" );
 
 			// Get access token
@@ -514,12 +506,13 @@ class Ga_Admin {
 			$param = '';
 			if ( ! self::save_access_token( $response ) ) {
 				$param = '&err=1';
-			}
-			self::api_client()->set_access_token( $response->getData() );
+			} else {
+				self::api_client()->set_access_token( $response->getData() );
 
-			// Get accounts data
-			$account_summaries = self::api_client()->call( 'ga_api_account_summaries' );
-			self::save_ga_account_summaries( $account_summaries->getData() );
+				// Get accounts data
+				$account_summaries = self::api_client()->call( 'ga_api_account_summaries' );
+				self::save_ga_account_summaries( $account_summaries->getData() );
+			}
 
 			wp_redirect( admin_url( Ga_Helper::GA_SETTINGS_PAGE_URL . $param ) );
 		}

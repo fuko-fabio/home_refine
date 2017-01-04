@@ -2,6 +2,8 @@
 
 class Ga_Lib_Api_Response {
 
+	public static $empty_response = array( '', '' );
+
 	private $header;
 	private $body;
 	private $data;
