@@ -24,7 +24,10 @@ $contact_bar_instagram_url = get_theme_mod( 'illdy_contact_bar_instagram_url' );
 <footer id="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12" style="margin-top: 15px; text-align: right">
+			<div class="col-sm-3" style="margin-top: 15px;">
+				<a href="https://www.patreon.com/bePatron?u=4673334" data-patreon-widget-type="become-patron-button">Be a Home Refine Patron</a><script async src="https://cdn6.patreon.com/becomePatronButton.bundle.js"></script>
+			</div>
+			<div class="col-sm-9" style="margin-top: 15px; text-align: right">
 				<div class="contact-us-social">
 					<?php if ( $contact_bar_twitter_url ): ?>
 						<a href="<?php echo esc_url( $contact_bar_twitter_url ); ?>" title="<?php _e( 'Twitter', 'illdy' ); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
