@@ -1053,6 +1053,18 @@ textarea, input {
 	text-decoration: underline;
 }
 
+#footer .footer-copyright {
+	padding-top: 40px;
+}
+
+#footer .footer-copyright {
+	padding-top: 40px;
+}
+
+#footer .footer-copyright-company {
+	text-align: right;
+}
+
 #footer .contact-us-social, #contact-us .section-content .contact-us-social
 	{
 	width: 100%;
