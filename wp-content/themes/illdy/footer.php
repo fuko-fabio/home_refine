@@ -69,38 +69,42 @@ $contact_bar_instagram_url = get_theme_mod( 'illdy_contact_bar_instagram_url' );
 				'after_title'   => '</h3></div>',
 			);
 			?>
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<?php
 				if ( is_active_sidebar( 'footer-sidebar-1' ) ):
 					dynamic_sidebar( 'footer-sidebar-1' );
 				endif;
 				?>
-			</div><!--/.col-sm-3-->
-			<div class="col-sm-3">
+			</div><!--/.col-sm-4-->
+			<div class="col-sm-4">
 				<?php
 				if ( is_active_sidebar( 'footer-sidebar-2' ) ):
 					dynamic_sidebar( 'footer-sidebar-2' );
 				endif;
 				?>
-			</div><!--/.col-sm-3-->
-			<div class="col-sm-3">
+			</div><!--/.col-sm-4-->
+			<div class="col-sm-4">
 				<?php
 				if ( is_active_sidebar( 'footer-sidebar-3' ) ):
 					dynamic_sidebar( 'footer-sidebar-3' );
 				endif;
 				?>
-			</div><!--/.col-sm-3-->
-			<div class="col-sm-3">
+			</div><!--/.col-sm-4-->
+		</div><!--/.row-->
+		<div class="row">
+			<div class="col-sm-6">
+				<a target="_blank" href="http://npsoftware.eu" title="nps software" class="author">
+					<span class="cname">nps</span><span class="csoftware"> software</span>
+				</a>
+			</div><!--/.col-sm-6-->
+			<div class="col-sm-6">
 				<!--
 				<?php if ( $img_footer_logo ): ?>
 					<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="footer-logo"><img src="<?php echo esc_url( $img_footer_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" /></a>
 				<?php endif; ?>
 				-->
 				<span class="copyright"><?php echo illdy_sanitize_html( $footer_copyright ); ?></span>
-				<a target="_blank" href="http://npsoftware.eu" title="nps software" class="author">
-					<span class="cname">nps</span><span class="csoftware"> software</span>
-				</a>
-			</div><!--/.col-sm-3-->
+			</div><!--/.col-sm-6-->
 		</div><!--/.row-->
 	</div><!--/.container-->
 </footer><!--/#footer-->
