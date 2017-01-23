@@ -11,9 +11,9 @@ if( have_posts() ):
 		if ( $static_page_content != '' ) : ?>
 			<section class="front-page-section" id="static-page-content">
 				<div class="section-header">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="col-sm-10 col-sm-offset-1">
 								<h3><?php the_title(); ?></h3>
 							</div><!--/.col-sm-12-->
 						</div><!--/.row-->

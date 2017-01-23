@@ -30,9 +30,9 @@ $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 <section id="testimonials" class="front-page-section" style="<?php if( $general_background_image ): echo 'background-image: url('. esc_url( $general_background_image ) .')'; endif; ?>">
 	<?php if( $general_title ): ?>
 		<div class="section-header">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-sm-10 col-sm-offset-1">
 						<h3><?php echo illdy_sanitize_html( $general_title ); ?></h3>
 					</div><!--/.col-sm-12-->
 				</div><!--/.row-->

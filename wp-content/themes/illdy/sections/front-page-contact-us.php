@@ -29,12 +29,12 @@ if ( $general_title != '' || $general_entry != '' || $general_address_title != '
 	<section id="contact-us" class="front-page-section">
 		<?php if ( $general_title || $general_entry ): ?>
 			<div class="section-header">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
 						<?php if ( $general_title ): ?>
-							<div class="col-sm-12">
+							<div class="col-sm-10 col-sm-offset-1">
 								<h3><?php echo illdy_sanitize_html( $general_title ); ?></h3>
-							</div><!--/.col-sm-12-->
+							</div><!--/.col-sm-10 col-sm-offset-1-->
 						<?php endif; ?>
 						<?php if ( $general_entry ): ?>
 							<div class="col-sm-10 col-sm-offset-1">
