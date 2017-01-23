@@ -1271,12 +1271,20 @@ textarea, input {
 #contact-us .section-content .wpcf7-form .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors
 	{
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
 	color: #f00;
 	float: left;
 	border: none;
+	font-weight: bold;
 }
 
+div.wpcf7-mail-sent-ok {
+	border: none;
+	margin: 0;
+	padding: 0;
+	color: #398f14;
+	font-weight: bold;
+}
 
 /* 11. Footer */
 #footer {
