@@ -16,12 +16,12 @@ $services_general_entry = get_theme_mod( 'illdy_services_general_entry' );
 <section id="services" class="front-page-section">
 	<?php if( $services_general_title || $services_general_entry ): ?>
 		<div class="section-header">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<?php if( $services_general_title ): ?>
-						<div class="col-sm-12">
+						<div class="col-sm-10 col-sm-offset-1">
 							<h3><?php echo illdy_sanitize_html( $services_general_title ); ?></h3>
-						</div><!--/.col-sm-12-->
+						</div><!--/.col-sm-10 col-sm-offset-1-->
 					<?php endif; ?>
 					<?php if( $services_general_entry ): ?>
 						<div class="col-sm-10 col-sm-offset-1">

@@ -34,7 +34,7 @@ $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h3><?php echo illdy_sanitize_html( $general_title ); ?></h3>
-					</div><!--/.col-sm-12-->
+					</div><!--/.col-sm-10 col-sm-offset-1-->
 				</div><!--/.row-->
 			</div><!--/.container-->
 		</div><!--/.section-header-->
