@@ -19,14 +19,22 @@ $services_general_entry = get_theme_mod( 'illdy_services_general_entry' );
 			<div class="container-fluid">
 				<div class="row">
 					<?php if( $services_general_title ): ?>
-						<div class="col-sm-10 col-sm-offset-1">
+						<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
+							<div class="col-sm-8">
+						<?php } else { ?>
+							<div class="col-sm-8 col-sm-offset-2">
+						<?php } ?>
 							<h3><?php echo illdy_sanitize_html( $services_general_title ); ?></h3>
-						</div><!--/.col-sm-10 col-sm-offset-1-->
+						</div>
 					<?php endif; ?>
 					<?php if( $services_general_entry ): ?>
-						<div class="col-sm-10 col-sm-offset-1">
+						<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
+							<div class="col-sm-8">
+						<?php } else { ?>
+							<div class="col-sm-8 col-sm-offset-2">
+						<?php } ?>
 							<p><?php echo illdy_sanitize_html( $services_general_entry ); ?></p>
-						</div><!--/.col-sm-10.col-sm-offset-1-->
+						</div>
 					<?php endif; ?>
 				</div><!--/.row-->
 			</div><!--/.container-->

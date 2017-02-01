@@ -13,16 +13,24 @@ if( have_posts() ):
 				<div class="section-header">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-10 col-sm-offset-1">
+							<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
+								<div class="col-sm-8">
+							<?php } else { ?>
+								<div class="col-sm-8 col-sm-offset-2">
+							<?php } ?>
 								<h3><?php the_title(); ?></h3>
-							</div><!--/.col-sm-12-->
+							</div>
 						</div><!--/.row-->
 					</div><!--/.container-->
 				</div><!--/.section-header-->
 				<div class="section-content">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-10 col-sm-offset-1">
+							<?php if ( is_active_sidebar( 'page-sidebar' ) ) { ?>
+								<div class="col-sm-8">
+							<?php } else { ?>
+								<div class="col-sm-8 col-sm-offset-2">
+							<?php } ?>
 								<?php echo $static_page_content; ?>
 							</div>
 						</div>

@@ -57,9 +57,6 @@ $contact_bar_instagram_url = get_theme_mod( 'illdy_contact_bar_instagram_url' );
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/wechat.png' ); ?>" />
 						<img class="wechat-code" src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/wechat_code.png' ); ?>" />
 					</a>
-					<!--
-					<a href="https://www.patreon.com/bePatron?u=4673334" data-patreon-widget-type="become-patron-button">Be a Home Refine Patron</a><script async src="https://cdn6.patreon.com/becomePatronButton.bundle.js"></script>
-					-->
 				</div><!--/.contact-us-social-->
 			</div><!--/.col-sm-12-->
 		</div>
