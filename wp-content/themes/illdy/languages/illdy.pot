@@ -1,22 +1,19 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Illdy v1.0.8\n"
-"POT-Creation-Date: 2016-04-07 10:15+0300\n"
-"PO-Revision-Date: 2016-03-08 14:59+0200\n"
-"Last-Translator: \n"
-"Language-Team: Colorlib\n"
-"Language: en\n"
+"Project-Id-Version: illdy\n"
+"POT-Creation-Date: 2017-03-06 13:24+0100\n"
+"PO-Revision-Date: 2017-03-06 13:28+0100\n"
+"Last-Translator: Norbert Pabian <norbert.pabian@gmail.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: .\n"
 
 #: comments.php:24 comments.php:46
 msgid "Comment navigation"
@@ -34,11 +31,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:85 sections/front-page-contact-us.php:115
+#: comments.php:85
 msgid "Name"
 msgstr ""
 
-#: comments.php:86 sections/front-page-contact-us.php:116
+#: comments.php:86
 msgid "Email"
 msgstr ""
 
@@ -46,200 +43,204 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: comments.php:91 comments.php:93 sections/front-page-contact-us.php:118
+#: comments.php:91 comments.php:93
 msgid "Message"
 msgstr ""
 
-#: footer.php:11 inc/customizer/panels/general-options.php:377
-msgid "&copy; Copyright 2016. All Rights Reserved."
+#: footer.php:33
+msgid "Twitter"
 msgstr ""
 
-#: footer.php:30
-msgid "Products"
-msgstr ""
-
-#: footer.php:30
-msgid "Our work"
-msgstr ""
-
-#: footer.php:30
-msgid "Club"
-msgstr ""
-
-#: footer.php:30
-msgid "News"
-msgstr ""
-
-#: footer.php:30
-msgid "Announcement"
+#: footer.php:36
+msgid "Facebook"
 msgstr ""
 
 #: footer.php:39
-msgid "Information"
+msgid "LinkedIn"
 msgstr ""
 
-#: footer.php:39
-msgid "Pricing"
+#: footer.php:42
+msgid "Google+"
 msgstr ""
 
-#: footer.php:39
-msgid "Terms"
-msgstr ""
-
-#: footer.php:39
-msgid "Affiliates"
-msgstr ""
-
-#: footer.php:39
-msgid "Blog"
+#: footer.php:45
+msgid "Pinterest"
 msgstr ""
 
 #: footer.php:48
-msgid "Support"
+msgid "Instagram"
 msgstr ""
 
-#: footer.php:48
-msgid "Documentation"
+#: footer.php:51
+msgid "YouTube"
 msgstr ""
 
-#: footer.php:48
-msgid "FAQs"
+#: footer.php:54
+msgid "Vimeo"
 msgstr ""
 
-#: footer.php:48
-msgid "Forums"
-msgstr ""
-
-#: footer.php:48
-msgid "Contact"
-msgstr ""
-
-#: footer.php:57
-msgid "Theme:"
-msgstr ""
-
-#: footer.php:57 header.php:11 inc/customizer/panels/general-options.php:155
-msgid "Illdy"
-msgstr ""
-
-#: functions.php:70
+#: functions.php:66
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:243
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:245
 msgid "The widgets added in this sidebar will appear in blog page."
 msgstr ""
 
-#: functions.php:165
+#: functions.php:254
+msgid "Page Sidebar"
+msgstr ""
+
+#: functions.php:256
+msgid "The widgets added in this sidebar will appear on single pages."
+msgstr ""
+
+#: functions.php:265
 msgid "Footer Sidebar 1"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:267
 msgid ""
 "The widgets added in this sidebar will appear in first block from footer."
 msgstr ""
 
-#: functions.php:176
+#: functions.php:276
 msgid "Footer Sidebar 2"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:278
 msgid ""
 "The widgets added in this sidebar will appear in second block from footer."
 msgstr ""
 
-#: functions.php:187
+#: functions.php:287
 msgid "Footer Sidebar 3"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:289
 msgid ""
 "The widgets added in this sidebar will appear in third block from footer."
 msgstr ""
 
-#: functions.php:198
+#: functions.php:298
 msgid "Front page - About Sidebar"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:300
 msgid ""
 "The widgets added in this sidebar will appear in about section from front "
 "page."
 msgstr ""
 
-#: functions.php:209
+#: functions.php:309
 msgid "Front page - Projects Sidebar"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:311
 msgid ""
 "The widgets added in this sidebar will appear in projects section from front "
 "page."
 msgstr ""
 
-#: functions.php:220
+#: functions.php:320
 msgid "Front page - Services Sidebar"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:322
 msgid ""
 "The widgets added in this sidebar will appear in services section from front "
 "page."
 msgstr ""
 
-#: functions.php:231
+#: functions.php:331
 msgid "Front page - Counter Sidebar"
 msgstr ""
 
-#: functions.php:233
+#: functions.php:333
 msgid ""
 "The widgets added in this sidebar will appear in counter section from front "
 "page."
 msgstr ""
 
-#: functions.php:242
+#: functions.php:342
 msgid "Front page - Team Sidebar"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:344
 msgid ""
 "The widgets added in this sidebar will appear in team section from front "
 "page."
 msgstr ""
 
-#: inc/components/entry-meta/class.mt-entry-meta.php:75
-#: inc/components/entry-meta/class.mt-entry-meta.php:97
+#: functions.php:354
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: functions.php:356
+msgid "The widgets added in this sidebar will appear in WooCommerce pages."
+msgstr ""
+
+#: header.php:12 inc/customizer/panels/general-options.php:129
+msgid "Illdy"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/actions-required.php:61
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:13
+msgid "Welcome to Illdy!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:30
+msgid "Translate Illdy"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:64
+msgid "Get started with Illdy"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:102
+msgid "Hooray! There are no recomended actions for you right now."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:139
+msgid "View Theme Info"
+msgstr ""
+
+#: inc/components/entry-meta/class.mt-entry-meta.php:76
+#: inc/components/entry-meta/class.mt-entry-meta.php:99
 msgid "No comments"
 msgstr ""
 
-#: inc/components/entry-meta/class.mt-entry-meta.php:75
-#: inc/components/entry-meta/class.mt-entry-meta.php:97
+#: inc/components/entry-meta/class.mt-entry-meta.php:76
+#: inc/components/entry-meta/class.mt-entry-meta.php:99
 msgid "comments"
 msgstr ""
 
-#: inc/components/entry-meta/class.mt-entry-meta.php:75
-#: inc/components/entry-meta/class.mt-entry-meta.php:97
+#: inc/components/entry-meta/class.mt-entry-meta.php:76
+#: inc/components/entry-meta/class.mt-entry-meta.php:99
 msgid "1 comment"
 msgstr ""
 
-#: inc/components/entry-meta/class.mt-entry-meta.php:75
-#: inc/components/entry-meta/class.mt-entry-meta.php:97
+#: inc/components/entry-meta/class.mt-entry-meta.php:76
+#: inc/components/entry-meta/class.mt-entry-meta.php:99
 msgid "Comments are off for this post"
 msgstr ""
 
-#: inc/components/entry-meta/class.mt-entry-meta.php:114
+#: inc/components/entry-meta/class.mt-entry-meta.php:116
 msgid "Tags: "
 msgstr ""
 
-#: inc/components/nav-walker/class.mt-nav-walker.php:122
+#: inc/components/nav-walker/class.mt-nav-walker.php:114
 msgid "Add a menu"
 msgstr ""
 
-#: inc/components/related-posts/class.mt-related-posts.php:122
+#: inc/components/related-posts/class.mt-related-posts.php:117
 msgid "Related Articles"
 msgstr ""
 
@@ -251,321 +252,553 @@ msgstr ""
 msgid "Select your contact form"
 msgstr ""
 
-#: inc/customizer/customizer.php:15
-msgid "Blog Header Image"
-msgstr ""
-
-#: inc/customizer/panels/about.php:16 inc/customizer/panels/about.php:54
-#: sections/front-page-about.php:10
-msgid "About"
+#: inc/customizer/panels/about.php:16
+msgid "About Section"
 msgstr ""
 
 #: inc/customizer/panels/about.php:17
 msgid "Control various options for about section from front page."
 msgstr ""
 
-#: inc/customizer/panels/about.php:26 inc/customizer/panels/counter.php:26
-#: inc/customizer/panels/projects.php:26 inc/customizer/panels/services.php:26
-#: inc/customizer/panels/team.php:26
-msgid "General"
-msgstr ""
-
-#: inc/customizer/panels/about.php:44 inc/customizer/panels/contact-us.php:48
+#: inc/customizer/panels/about.php:38 inc/customizer/panels/contact-us.php:48
 #: inc/customizer/panels/counter.php:44
 #: inc/customizer/panels/latest-news.php:48
-#: inc/customizer/panels/projects.php:44 inc/customizer/panels/services.php:44
-#: inc/customizer/panels/team.php:44 inc/customizer/panels/testimonials.php:49
+#: inc/customizer/panels/projects.php:38 inc/customizer/panels/services.php:32
+#: inc/customizer/panels/team.php:34 inc/customizer/panels/testimonials.php:49
 msgid "Show this section?"
 msgstr ""
 
-#: inc/customizer/panels/about.php:61 inc/customizer/panels/contact-us.php:65
+#: inc/customizer/panels/about.php:48
+#: inc/customizer/panels/sections-order.php:29
+#: inc/customizer/panels/sections-order.php:57
+#: inc/customizer/panels/sections-order.php:85
+#: inc/customizer/panels/sections-order.php:113
+#: inc/customizer/panels/sections-order.php:141
+#: inc/customizer/panels/sections-order.php:169
+#: inc/customizer/panels/sections-order.php:197
+#: inc/customizer/panels/sections-order.php:225
+msgid "About"
+msgstr ""
+
+#: inc/customizer/panels/about.php:55 inc/customizer/panels/contact-us.php:65
 #: inc/customizer/panels/latest-news.php:65
-#: inc/customizer/panels/projects.php:61 inc/customizer/panels/services.php:61
-#: inc/customizer/panels/team.php:61 inc/customizer/panels/testimonials.php:66
+#: inc/customizer/panels/projects.php:56 inc/customizer/panels/services.php:44
+#: inc/customizer/panels/team.php:51 inc/customizer/panels/testimonials.php:67
 msgid "Title"
 msgstr ""
 
-#: inc/customizer/panels/about.php:62 inc/customizer/panels/contact-us.php:66
+#: inc/customizer/panels/about.php:56 inc/customizer/panels/contact-us.php:66
 #: inc/customizer/panels/latest-news.php:66
-#: inc/customizer/panels/projects.php:62 inc/customizer/panels/services.php:62
-#: inc/customizer/panels/team.php:62 inc/customizer/panels/testimonials.php:67
+#: inc/customizer/panels/projects.php:57 inc/customizer/panels/services.php:45
+#: inc/customizer/panels/team.php:52 inc/customizer/panels/testimonials.php:68
 msgid "Add the title for this section."
 msgstr ""
 
-#: inc/customizer/panels/about.php:72 sections/front-page-about.php:11
+#: inc/customizer/panels/about.php:67
 msgid ""
-"It is an amazng one-page theme with great features that offers an incredible "
-"experience. It is easy to install, make changes, adapt for your business. A "
-"modern design with clean lines and styling for a wide variety of content, "
-"exactly how a business design should be. You can add as many images as you "
-"want to the main header area and turn them into slider."
+"It is an amazing one-page theme with great features that offers an "
+"incredible experience. It is easy to install, make changes, adapt for your "
+"business. A modern design with clean lines and styling for a wide variety of "
+"content, exactly how a business design should be. You can add as many images "
+"as you want to the main header area and turn them into slider."
 msgstr ""
 
-#: inc/customizer/panels/about.php:79 inc/customizer/panels/contact-us.php:83
-#: inc/customizer/panels/jumbotron.php:121
-#: inc/customizer/panels/latest-news.php:83
-#: inc/customizer/panels/projects.php:79 inc/customizer/panels/services.php:79
-#: inc/customizer/panels/team.php:79
+#: inc/customizer/panels/about.php:74 inc/customizer/panels/contact-us.php:85
+#: inc/customizer/panels/jumbotron.php:116
+#: inc/customizer/panels/latest-news.php:84
+#: inc/customizer/panels/projects.php:77 inc/customizer/panels/services.php:59
+#: inc/customizer/panels/team.php:71
 msgid "Entry"
 msgstr ""
 
-#: inc/customizer/panels/about.php:80 inc/customizer/panels/contact-us.php:84
-#: inc/customizer/panels/latest-news.php:84
-#: inc/customizer/panels/projects.php:80 inc/customizer/panels/services.php:80
-#: inc/customizer/panels/team.php:80
+#: inc/customizer/panels/about.php:75 inc/customizer/panels/contact-us.php:86
+#: inc/customizer/panels/latest-news.php:85
+#: inc/customizer/panels/projects.php:78 inc/customizer/panels/services.php:60
+#: inc/customizer/panels/team.php:72
 msgid "Add the content for this section."
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:28
-#: inc/customizer/panels/contact-us.php:58
-#: sections/front-page-contact-us.php:17
-msgid "Contact us"
+#: inc/customizer/panels/about.php:95 inc/customizer/panels/contact-us.php:106
+#: inc/customizer/panels/latest-news.php:105
+#: inc/customizer/panels/projects.php:100 inc/customizer/panels/services.php:80
+#: inc/customizer/panels/team.php:92
+msgid "Install Illdy Companion"
 msgstr ""
 
+#: inc/customizer/panels/about.php:96 inc/customizer/panels/contact-us.php:107
+#: inc/customizer/panels/latest-news.php:106
+#: inc/customizer/panels/projects.php:101 inc/customizer/panels/services.php:81
+#: inc/customizer/panels/team.php:93
+#, php-format
+msgid ""
+"In order to edit description please install <a href=\"%s\" target=\"_blank"
+"\">Illdy Companion</a>"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:11
+msgid "Blog Jumbotron Titles"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:16
+msgid "Default site title"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:21
+msgid "Default site tagline"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:22
+msgid ""
+"The tagline will be shown on archive pages, in the jumbotron right below the "
+"title."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:27
+msgid ""
+"This is the default WordPress title. This will be used in the jumbotron, if "
+"you don't specify a custom title."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:33
+msgid "Blog Options"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:34
+msgid "You can change blog options "
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:39
+msgid "Blog Archive Header Image"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:51
+msgid "Background Stretch"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:55
+msgid "Cover"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:56
+msgid "Contain"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:73
+msgid "Single Post Options"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:74
+msgid ""
+"This section allows you to control how certain elements are displayed on the "
+"blog single page."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:87
+msgid "Posted on meta on single blog post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:88
+msgid "This will disable the posted on zone as well as the author name"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:100
+msgid "Category meta on single blog post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:101
+msgid "This will disable the posted in zone."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:114
+msgid "Tags meta on single blog post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:115
+msgid "This will disable the tagged with zone."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:128
+msgid "Coments meta on single blog post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:129
+msgid "This will disable the comments header zone."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:141
+msgid "Author info box on single blog post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:142
+msgid "Displayed right at the end of the post"
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:158
+msgid "Use a custom title on the blog archive."
+msgstr ""
+
+#: inc/customizer/panels/blog-options.php:159
+msgid ""
+"Will be displayed in the Jumbotron as a custom title. Only used on the blog "
+"archive, all other pages default to the WordPress Core functionality where "
+"the archive title is displayed."
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:17
+msgid "Contact us Section"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:18
 #: inc/customizer/panels/contact-us.php:29
 msgid "Control various options for contact us section from front page."
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:76
-#: sections/front-page-contact-us.php:18
-msgid "And we will get in touch as son as possible."
+#: inc/customizer/panels/contact-us.php:28
+#: inc/customizer/panels/contact-us.php:58
+#: inc/customizer/panels/sections-order.php:36
+#: inc/customizer/panels/sections-order.php:64
+#: inc/customizer/panels/sections-order.php:92
+#: inc/customizer/panels/sections-order.php:120
+#: inc/customizer/panels/sections-order.php:148
+#: inc/customizer/panels/sections-order.php:176
+#: inc/customizer/panels/sections-order.php:204
+#: inc/customizer/panels/sections-order.php:232
+msgid "Contact us"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:95
-#: sections/front-page-contact-us.php:20
+#: inc/customizer/panels/contact-us.php:31
+msgid "General"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:78
+msgid "And we will get in touch as soon as possible."
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:122
+#: sections/front-page-contact-us.php:39
 msgid "Address"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:102
+#: inc/customizer/panels/contact-us.php:129
 msgid "Address Title"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:103
+#: inc/customizer/panels/contact-us.php:130
 msgid "Add the title for address block from this section."
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:113
-#: sections/front-page-contact-us.php:21
+#: inc/customizer/panels/contact-us.php:140
 msgid "Customer Support"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:120
+#: inc/customizer/panels/contact-us.php:147
 msgid "Customer Support Title"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:121
+#: inc/customizer/panels/contact-us.php:148
 msgid "Add the title for customer support block from this section."
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:137
+#: inc/customizer/panels/contact-us.php:164
 msgid ""
 "Select the contact form you'd like to display (powered by Contact Form 7)"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:158
+#: inc/customizer/panels/contact-us.php:185
 msgid "Contact Form Creation"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:159
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2604
+#: inc/customizer/panels/contact-us.php:186
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2717
 msgid "Install"
 msgstr ""
 
-#: inc/customizer/panels/contact-us.php:159
+#: inc/customizer/panels/contact-us.php:186
 msgid "and select a contact form to work this setting."
 msgstr ""
 
-#: inc/customizer/panels/counter.php:16
-msgid "Counter"
-msgstr ""
-
-#: inc/customizer/panels/counter.php:17
-msgid "Control various options for counter section from front page."
-msgstr ""
-
-#: inc/customizer/panels/counter.php:55
-msgid "Background"
-msgstr ""
-
-#: inc/customizer/panels/counter.php:68
-msgid "Type of Background"
-msgstr ""
-
-#: inc/customizer/panels/counter.php:73 inc/customizer/panels/counter.php:92
-#: inc/customizer/panels/jumbotron.php:48
-msgid "Image"
-msgstr ""
-
-#: inc/customizer/panels/counter.php:74 inc/customizer/panels/counter.php:114
-msgid "Color"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:43
-msgid "General Options"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:44
-msgid ""
-"You can change the site layout in this area as well as your contact details "
-"(the ones displayed in the header & footer) "
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:54
-msgid "Preloader"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:71
-msgid "Enable the preloader?"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:90
-msgid "Background Color"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:110
-msgid "Primary Color"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:130
-msgid "Secondly Color"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:144
-msgid "Logo"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:163
-msgid "Enter company name"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:164
-msgid "This field is best used when you don't have a professional image logo"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:184
-msgid "Image Site Logo"
-msgstr ""
-
-#: inc/customizer/panels/general-options.php:199
+#: inc/customizer/panels/contact-us.php:202
 msgid "Contact Details"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:200
+#: inc/customizer/panels/contact-us.php:203
 msgid ""
 "These are the contact details displayed in the Contact us section from front "
 "page."
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:217
+#: inc/customizer/panels/contact-us.php:220
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:218
-#: inc/customizer/panels/general-options.php:237
-#: inc/customizer/panels/general-options.php:256
-#: inc/customizer/panels/general-options.php:275
-#: inc/customizer/panels/general-options.php:295
-#: inc/customizer/panels/general-options.php:316
-#: inc/customizer/panels/general-options.php:336
+#: inc/customizer/panels/contact-us.php:221
+#: inc/customizer/panels/contact-us.php:240
+#: inc/customizer/panels/contact-us.php:259
+#: inc/customizer/panels/contact-us.php:278
+#: inc/customizer/panels/contact-us.php:297
+#: inc/customizer/panels/contact-us.php:316
+#: inc/customizer/panels/contact-us.php:335
+#: inc/customizer/panels/contact-us.php:354
+#: inc/customizer/panels/contact-us.php:375
+#: inc/customizer/panels/contact-us.php:395
+#: inc/customizer/panels/contact-us.php:414
+#: inc/customizer/panels/contact-us.php:435
+#: inc/customizer/panels/contact-us.php:455
+#: inc/customizer/panels/contact-us.php:474
+#: inc/customizer/panels/contact-us.php:493
 msgid "Will be displayed in the contact section from front page."
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:236
+#: inc/customizer/panels/contact-us.php:239
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:255
+#: inc/customizer/panels/contact-us.php:258
 msgid "LinkedIN URL"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:267
-#: sections/front-page-contact-us.php:13
+#: inc/customizer/panels/contact-us.php:277
+msgid "Google+ URL"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:296
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:315
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:334
+msgid "YouTube URL"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:353
+msgid "Vimeo URL"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:367
 msgid "contact@site.com"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:274
+#: inc/customizer/panels/contact-us.php:374
 msgid "Email addr."
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:287
-#: sections/front-page-contact-us.php:14
+#: inc/customizer/panels/contact-us.php:387
+#: inc/customizer/panels/contact-us.php:406
 msgid "(555) 555-5555"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:294
+#: inc/customizer/panels/contact-us.php:394
 msgid "Phone number"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:307
-#: sections/front-page-contact-us.php:15
+#: inc/customizer/panels/contact-us.php:413
+msgid "Mobile phone number"
+msgstr ""
+
+#: inc/customizer/panels/contact-us.php:426
 msgid "Street 221B Baker Street, "
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:315
+#: inc/customizer/panels/contact-us.php:434
 msgid "Address 1"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:327
-#: sections/front-page-contact-us.php:16
+#: inc/customizer/panels/contact-us.php:446
+#: inc/customizer/panels/contact-us.php:465
+#: inc/customizer/panels/contact-us.php:484
 msgid "London, UK"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:335
+#: inc/customizer/panels/contact-us.php:454
 msgid "Address 2"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:347
-msgid "Footer Details"
+#: inc/customizer/panels/contact-us.php:473
+msgid "Address 3"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:348
-msgid "Change the footer copyright message from here. Note: no HTML allowed."
+#: inc/customizer/panels/contact-us.php:492
+msgid "Address 4"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:366
-msgid "Display theme copyright in the footer?"
+#: inc/customizer/panels/counter.php:27
+msgid "Counter Section"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:385
+#: inc/customizer/panels/counter.php:28
+msgid ""
+"*In order to get this section to show up on the front-page, make sure you "
+"have: 1) enabled static front-page & 2) have a widget placed in this "
+"sidebar. More specifically go to Widgets -> Front page - counter sidebar & "
+"place the [Illdy] - Counter widget in here."
+msgstr ""
+
+#: inc/customizer/panels/counter.php:58
+msgid "Type of Background"
+msgstr ""
+
+#: inc/customizer/panels/counter.php:63 inc/customizer/panels/counter.php:82
+msgid "Image"
+msgstr ""
+
+#: inc/customizer/panels/counter.php:64 inc/customizer/panels/counter.php:104
+msgid "Color"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:12
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:24
+msgid ""
+"The site logo is used as a graphical representation of your company name. "
+"Recommended size: 105 (width) x 75 (height) pixels(px)."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:25
+msgid "Site logo"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:46
+msgid "General Options"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:47
+msgid ""
+"You can change the site layout in this area as well as your contact details "
+"(the ones displayed in the header & footer) "
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:55
+msgid "Preloader"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:67
+msgid "Enable the site preloader?"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:78
+msgid "Preloader background color"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:79
+msgid ""
+"Controls the background color for the container where the preloader is "
+"diplayed on"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:91
+msgid "Preloader primary color"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:92
+msgid "Controls the color of the loading bar & of the percentage."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:104
+msgid "Preloader secondary color"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:105
+msgid "Controls the color outline of the preloader (the border)"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:116
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:134
+msgid "Text logo (company name)"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:135
+msgid ""
+"This field is best used when you don't have an image logo or simply prefer "
+"using a text as your logo / company name."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:145
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:146
+msgid "Change the footer copyright message from here."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:154
+msgid "&copy; Copyright 2016. All Rights Reserved."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:159
 msgid "Footer Copyright"
 msgstr ""
 
-#: inc/customizer/panels/general-options.php:405
+#: inc/customizer/panels/general-options.php:160
+msgid "Use this to display your company copyright message."
+msgstr ""
+
+#: inc/customizer/panels/general-options.php:173
 msgid "Footer Logo"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:28
-msgid "Jumbotron"
+#: inc/customizer/panels/general-options.php:174
+msgid "Image logo used in the footer, above the copyright message."
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:60
-#: sections/front-page-bottom-header.php:10
+#: inc/customizer/panels/jumbotron.php:27
+msgid "Jumbotron Section"
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:28
+msgid ""
+"Control various jumbotron related settings. Will only be displayed if a "
+"<strong>custom front-page is set in Settings -> Reading.</strong>"
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:41
+#: inc/customizer/panels/testimonials.php:88
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:55
+msgid "Featured image as jumbotron ?"
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:56
+msgid ""
+"This will remove the featured image from inside the post content and use it "
+"in the jumbotron as a background image. Works for single posts & pages."
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:69
+msgid "Parallax effect on header image ?"
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:70
+msgid ""
+"Enabling this will add a parallax scrolling effect for the header image."
+msgstr ""
+
+#: inc/customizer/panels/jumbotron.php:77
 msgid "Clean"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:67
+#: inc/customizer/panels/jumbotron.php:81
 msgid "First word from title"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:68
-msgid "Add first word in the title."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:78
-#: sections/front-page-bottom-header.php:11
+#: inc/customizer/panels/jumbotron.php:88
 msgid "Slick"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:85
+#: inc/customizer/panels/jumbotron.php:92
 msgid "Second word from title"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:86
-msgid "Add second word in the title."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:96
-#: sections/front-page-bottom-header.php:12
+#: inc/customizer/panels/jumbotron.php:99
 msgid "Pixel Perfect"
 msgstr ""
 
@@ -573,240 +806,286 @@ msgstr ""
 msgid "Third word from title"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:104
-msgid "Add third word in the title."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:114
-#: sections/front-page-bottom-header.php:13
+#: inc/customizer/panels/jumbotron.php:112
 msgid ""
 "lldy is a great one-page theme, perfect for developers and designers but "
 "also for someone who just wants a new website for his business. Try it now!"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:122
-msgid "The content added in this field will show below title."
+#: inc/customizer/panels/jumbotron.php:117
+msgid "The content added in this field will show below the title."
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:133
-#: sections/front-page-bottom-header.php:14
+#: inc/customizer/panels/jumbotron.php:128
 msgid "Learn more"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:140
+#: inc/customizer/panels/jumbotron.php:132
 msgid "First button title"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:141
-msgid "Add the text for first button."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:157
+#: inc/customizer/panels/jumbotron.php:143
 msgid "First button URL"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:158
-msgid "Add the URL for first button."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:169
-#: sections/front-page-bottom-header.php:16
+#: inc/customizer/panels/jumbotron.php:151
 msgid "Download"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:176
+#: inc/customizer/panels/jumbotron.php:155
 msgid "Second button title"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:177
-msgid "Add the text for second button."
-msgstr ""
-
-#: inc/customizer/panels/jumbotron.php:193
+#: inc/customizer/panels/jumbotron.php:166
 msgid "Second button URL"
 msgstr ""
 
-#: inc/customizer/panels/jumbotron.php:194
-msgid "Add the URL for second button."
-msgstr ""
-
 #: inc/customizer/panels/latest-news.php:28
-#: inc/customizer/panels/latest-news.php:58
-#: sections/front-page-latest-news.php:10
-msgid "Latest News"
+msgid "Latest News Section"
 msgstr ""
 
 #: inc/customizer/panels/latest-news.php:29
 msgid "Control various options for latest news section from front page."
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:76
-#: sections/front-page-latest-news.php:11
-msgid ""
-"If you are interested in the latest articles in the industry, take a sneak "
-"peek at our blog. You’ve got nothing to loose!"
+#: inc/customizer/panels/latest-news.php:58
+#: inc/customizer/panels/sections-order.php:33
+#: inc/customizer/panels/sections-order.php:61
+#: inc/customizer/panels/sections-order.php:89
+#: inc/customizer/panels/sections-order.php:117
+#: inc/customizer/panels/sections-order.php:145
+#: inc/customizer/panels/sections-order.php:173
+#: inc/customizer/panels/sections-order.php:201
+#: inc/customizer/panels/sections-order.php:229
+msgid "Latest News"
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:95
-#: sections/front-page-latest-news.php:12
+#: inc/customizer/panels/latest-news.php:77
+msgid ""
+"If you are interested in the latest articles in the industry, take a sneak "
+"peek at our blog. You have nothing to loose!"
+msgstr ""
+
+#: inc/customizer/panels/latest-news.php:121
 msgid "See blog"
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:102
-#: inc/customizer/panels/latest-news.php:119
+#: inc/customizer/panels/latest-news.php:128
 msgid "Button Text"
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:103
+#: inc/customizer/panels/latest-news.php:129
 msgid "Add the button text for this section."
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:120
-msgid "Add the button URL for this section."
-msgstr ""
-
-#: inc/customizer/panels/latest-news.php:137
-#: inc/customizer/panels/testimonials.php:106
+#: inc/customizer/panels/latest-news.php:146
+#: inc/customizer/panels/testimonials.php:107
 msgid "Number of posts"
 msgstr ""
 
-#: inc/customizer/panels/latest-news.php:138
-#: inc/customizer/panels/testimonials.php:107
+#: inc/customizer/panels/latest-news.php:147
+#: inc/customizer/panels/testimonials.php:108
 msgid "Add the number of posts to show in this section."
 msgstr ""
 
-#: inc/customizer/panels/projects.php:16 inc/customizer/panels/projects.php:54
-#: sections/front-page-counter.php:39
-msgid "Projects"
+#: inc/customizer/panels/projects.php:16
+msgid "Projects Section"
 msgstr ""
 
 #: inc/customizer/panels/projects.php:17
 msgid "Control various options for projects section from front page."
 msgstr ""
 
-#: inc/customizer/panels/projects.php:72
+#: inc/customizer/panels/projects.php:49
+#: inc/customizer/panels/sections-order.php:30
+#: inc/customizer/panels/sections-order.php:58
+#: inc/customizer/panels/sections-order.php:86
+#: inc/customizer/panels/sections-order.php:114
+#: inc/customizer/panels/sections-order.php:142
+#: inc/customizer/panels/sections-order.php:170
+#: inc/customizer/panels/sections-order.php:198
+#: inc/customizer/panels/sections-order.php:226
+#: sections/front-page-counter.php:43
+msgid "Projects"
+msgstr ""
+
+#: inc/customizer/panels/projects.php:70
 msgid "You'll love our work. Check it out!"
 msgstr ""
 
-#: inc/customizer/panels/services.php:16 inc/customizer/panels/services.php:54
-#: sections/front-page-services.php:10
+#: inc/customizer/panels/projects.php:123
+#: inc/customizer/panels/testimonials.php:128
+msgid "Install JetPack"
+msgstr ""
+
+#: inc/customizer/panels/projects.php:124
+msgid ""
+"In order to get the Projects module working, you will have to install "
+"JetPack and enable Custom Post Type: Projects."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:7
+msgid "Sections Order"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:24
+msgid "First section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:25
+msgid ""
+"Please select what you want to display on the first section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:31
+#: inc/customizer/panels/sections-order.php:59
+#: inc/customizer/panels/sections-order.php:87
+#: inc/customizer/panels/sections-order.php:115
+#: inc/customizer/panels/sections-order.php:143
+#: inc/customizer/panels/sections-order.php:171
+#: inc/customizer/panels/sections-order.php:199
+#: inc/customizer/panels/sections-order.php:227
+#: inc/customizer/panels/testimonials.php:60
+msgid "Testimonials"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:32
+#: inc/customizer/panels/sections-order.php:60
+#: inc/customizer/panels/sections-order.php:88
+#: inc/customizer/panels/sections-order.php:116
+#: inc/customizer/panels/sections-order.php:144
+#: inc/customizer/panels/sections-order.php:172
+#: inc/customizer/panels/sections-order.php:200
+#: inc/customizer/panels/sections-order.php:228
+#: inc/customizer/panels/services.php:40
 msgid "Services"
 msgstr ""
 
-#: inc/customizer/panels/services.php:17
+#: inc/customizer/panels/sections-order.php:34
+#: inc/customizer/panels/sections-order.php:62
+#: inc/customizer/panels/sections-order.php:90
+#: inc/customizer/panels/sections-order.php:118
+#: inc/customizer/panels/sections-order.php:146
+#: inc/customizer/panels/sections-order.php:174
+#: inc/customizer/panels/sections-order.php:202
+#: inc/customizer/panels/sections-order.php:230
+msgid "Counter"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:35
+#: inc/customizer/panels/sections-order.php:63
+#: inc/customizer/panels/sections-order.php:91
+#: inc/customizer/panels/sections-order.php:119
+#: inc/customizer/panels/sections-order.php:147
+#: inc/customizer/panels/sections-order.php:175
+#: inc/customizer/panels/sections-order.php:203
+#: inc/customizer/panels/sections-order.php:231
+#: inc/customizer/panels/team.php:44
+msgid "Team"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:52
+msgid "Second section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:53
+msgid ""
+"Please select what you want to display on the second section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:80
+msgid "Third section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:81
+msgid ""
+"Please select what you want to display on the third section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:108
+msgid "Fourth section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:109
+msgid ""
+"Please select what you want to display on the fourth section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:136
+msgid "Fifth section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:137
+msgid ""
+"Please select what you want to display on the fifth section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:164
+msgid "Sixth section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:165
+msgid ""
+"Please select what you want to display on the sixth section from front page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:192
+msgid "Seventh section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:193
+msgid ""
+"Please select what you want to display on the seventh section from front "
+"page."
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:220
+msgid "Eighth section"
+msgstr ""
+
+#: inc/customizer/panels/sections-order.php:221
+msgid ""
+"Please select what you want to display on the eighth section from front page."
+msgstr ""
+
+#: inc/customizer/panels/services.php:15
+msgid "Services Section"
+msgstr ""
+
+#: inc/customizer/panels/services.php:16
 msgid "Control various options for services section from front page."
 msgstr ""
 
-#: inc/customizer/panels/services.php:72 sections/front-page-services.php:11
+#: inc/customizer/panels/services.php:55
 msgid ""
 "In order to help you grow your business, our carefully selected experts can "
 "advise you in in the following areas:"
 msgstr ""
 
-#: inc/customizer/panels/single-post-options.php:18
-msgid "Single Post Options"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:19
-msgid ""
-"Control various blog options from here. Most of the options from this panel "
-"refer to the blog single page view. If you're not familiar with that term, "
-"please perform a Google search."
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:29
-msgid "Global"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:30
-msgid ""
-"This section allows you to control how certain elements are displayed on the "
-"blog single page."
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:47
-msgid "Posted on meta on single blog post"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:48
-msgid "This will disable the posted on zone as well as the author name"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:65
-msgid "Category meta on single blog post"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:66
-msgid "This will disable the posted in zone."
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:85
-msgid "Tags meta on single blog post"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:86
-msgid "This will disable the tagged with zone."
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:104
-msgid "Coments meta on single blog post"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:105
-msgid "This will disable the comments header zone."
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:124
-msgid "Social sharing?"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:125
-msgid "Displayed right under the post title"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:142
-msgid "Author info box on single blog post"
-msgstr ""
-
-#: inc/customizer/panels/single-post-options.php:143
-msgid "Displayed right at the end of the post"
-msgstr ""
-
-#: inc/customizer/panels/team.php:16 inc/customizer/panels/team.php:54
-#: sections/front-page-team.php:10
-msgid "Team"
+#: inc/customizer/panels/team.php:16
+msgid "Team Section"
 msgstr ""
 
 #: inc/customizer/panels/team.php:17
 msgid "Control various options for team section from front page."
 msgstr ""
 
-#: inc/customizer/panels/team.php:72 sections/front-page-team.php:11
+#: inc/customizer/panels/team.php:64
 msgid "Meet the people that are going to take your business to the next level."
 msgstr ""
 
 #: inc/customizer/panels/testimonials.php:28
-#: inc/customizer/panels/testimonials.php:59
-#: sections/front-page-testimonials.php:10
-msgid "Testimonials"
+msgid "Testimonials Section"
 msgstr ""
 
 #: inc/customizer/panels/testimonials.php:29
 msgid "Control various options for testimonials section from front page."
 msgstr ""
 
-#: inc/customizer/panels/testimonials.php:87
-msgid "Background Image"
-msgstr ""
-
-#: inc/customizer/panels/testimonials.php:127
-msgid "Install JetPack"
-msgstr ""
-
-#: inc/customizer/panels/testimonials.php:128
+#: inc/customizer/panels/testimonials.php:129
 msgid ""
-"Install JetPack and enable Custom Post Type: Testimonials to work these "
-"settings."
+"In order to get the Testimonials module working, you will have to install "
+"JetPack and enable Custom Post Type: Testimonials."
 msgstr ""
 
 #: inc/extras.php:32
@@ -831,432 +1110,454 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:8
-#, php-format
-msgid "Category: %s"
+#: inc/extras.php:150
+msgid ""
+"Some changes were made in the latest version so that the theme would "
+"properly work with core WordPress' front page system.  If you'd like to "
+"continue using the custom front page, visit"
 msgstr ""
 
-#: inc/template-tags.php:10
-#, php-format
-msgid "Tag: %s"
+#: inc/extras.php:151
+msgid "Settings > Readings"
 msgstr ""
 
-#: inc/template-tags.php:12
-#, php-format
-msgid "Author: %s"
+#: inc/extras.php:152
+msgid "and set your front page to display a page."
 msgstr ""
 
-#: inc/template-tags.php:14
-#, php-format
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:16
-#, php-format
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:18
-#, php-format
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:40
-#, php-format
-msgid "Archives: %s"
-msgstr ""
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:44
-#, php-format
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:46
-msgid "Archives"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:327
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:95
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:328
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:96
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:330
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:97
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:336
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:99
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:385
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:121
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:398
-msgid "Return to the dashboard"
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:386
+msgid "Return to the Dashboard"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3030
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:387
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3159
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:122
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:400
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:123
 msgid "The following plugin was activated successfully:"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:390
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:124
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:126
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:128
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "Dismiss this notice"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:405
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+#: inc/tgm-plugin-activation/tgm-plugin-activation.php:130
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2168
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2273
 msgid "Required"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2171
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2276
 msgid "Recommended"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2187
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2292
 msgid "WordPress Repository"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2190
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2295
 msgid "External Source"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2193
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2298
 msgid "Pre-Packaged"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2210
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2315
 msgid "Not Installed"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2214
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2319
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2216
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2321
 msgid "Active"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2222
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2327
 msgid "Required Update not Available"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2225
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2330
 msgid "Requires Update"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2228
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2333
 msgid "Update recommended"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2380
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2490
 msgid "Installed version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2388
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2498
 msgid "Minimum required version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2400
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2510
 msgid "Available version:"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2423
-#, php-format
-msgid ""
-"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
-"Dashboard</a>"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2437
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2547
 msgid "Plugin"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2438
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2548
 msgid "Source"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2439
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2549
 msgid "Type"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2443
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2553
 msgid "Version"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2444
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2554
 msgid "Status"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2610
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2723
 msgid "Update"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2613
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2726
 msgid "Activate"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2644
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2757
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2646
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2759
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2682
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2800
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2684
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2802
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3029
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3158
 msgid "Plugin activation failed."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3363
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3498
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3365
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3501
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3366
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3503
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3370
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3507
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3371
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3509
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3372
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3510
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3373
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3512
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3376
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3515
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3378
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3518
 msgid "All installations have been completed."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3379
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3520
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: sections/blog-bottom-header.php:14 sections/front-page-bottom-header.php:24
-msgid "."
+#: sections/blog-bottom-header.php:22
+msgid "Blog"
 msgstr ""
 
-#: sections/front-page-about.php:46
+#: sections/front-page-about.php:57
 msgid "Typography"
 msgstr ""
 
-#: sections/front-page-about.php:47
+#: sections/front-page-about.php:58
 msgid "Design"
 msgstr ""
 
-#: sections/front-page-about.php:48
+#: sections/front-page-about.php:59
 msgid "Development"
 msgstr ""
 
-#: sections/front-page-contact-us.php:73
+#: sections/front-page-bottom-header.php:17
+msgid "The Popular Property Management Company in London"
+msgstr ""
+
+#: sections/front-page-bottom-header.php:18
+msgid "Lettings, Maintenance, Buying & Selling"
+msgstr ""
+
+#: sections/front-page-bottom-header.php:19
+msgid "+44 01689 768393"
+msgstr ""
+
+#: sections/front-page-bottom-header.php:20
+#: sections/front-page-contact-us.php:60
+msgid "Contact Us"
+msgstr ""
+
+#: sections/front-page-contact-us.php:26
+msgid "Contact"
+msgstr ""
+
+#: sections/front-page-contact-us.php:43
+msgid "Home Refine Ltd"
+msgstr ""
+
+#: sections/front-page-contact-us.php:46
+msgid "Suite W0078"
+msgstr ""
+
+#: sections/front-page-contact-us.php:49
+msgid "265 269 Kingston Road"
+msgstr ""
+
+#: sections/front-page-contact-us.php:52
+msgid "SW19 3NW London UK"
+msgstr ""
+
+#: sections/front-page-contact-us.php:63
 msgid "E-mail:"
 msgstr ""
 
-#: sections/front-page-contact-us.php:76
+#: sections/front-page-contact-us.php:67
 msgid "Phone:"
 msgstr ""
 
-#: sections/front-page-contact-us.php:85 widgets/class-widget-person.php:93
-msgid "Twitter"
+#: sections/front-page-contact-us.php:70
+msgid "Mobile:"
 msgstr ""
 
-#: sections/front-page-contact-us.php:88 widgets/class-widget-person.php:92
-msgid "Facebook"
-msgstr ""
-
-#: sections/front-page-contact-us.php:91 widgets/class-widget-person.php:94
-msgid "LinkedIn"
-msgstr ""
-
-#: sections/front-page-contact-us.php:117
-msgid "Subject"
-msgstr ""
-
-#: sections/front-page-contact-us.php:119
-msgid "Send"
-msgstr ""
-
-#: sections/front-page-counter.php:40
+#: sections/front-page-counter.php:44
 msgid "Clients"
 msgstr ""
 
-#: sections/front-page-counter.php:41
+#: sections/front-page-counter.php:45
 msgid "Coffes"
 msgstr ""
 
-#: sections/front-page-latest-news.php:65 template-parts/content.php:20
+#: sections/front-page-latest-news.php:85 template-parts/content.php:20
 msgid "Read more"
 msgstr ""
 
-#: sections/front-page-projects.php:46
+#: sections/front-page-projects.php:57
 msgid "Project 1"
 msgstr ""
 
-#: sections/front-page-projects.php:47
+#: sections/front-page-projects.php:58
 msgid "Project 2"
 msgstr ""
 
-#: sections/front-page-projects.php:48
+#: sections/front-page-projects.php:59
 msgid "Project 3"
 msgstr ""
 
-#: sections/front-page-projects.php:49
+#: sections/front-page-projects.php:60
 msgid "Project 4"
 msgstr ""
 
-#: sections/front-page-services.php:46
+#: sections/front-page-services.php:57
 msgid "Web Design"
 msgstr ""
 
-#: sections/front-page-services.php:46 sections/front-page-services.php:47
-#: sections/front-page-services.php:48
+#: sections/front-page-services.php:57 sections/front-page-services.php:58
+#: sections/front-page-services.php:59
 msgid ""
 "Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt "
 "tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in "
 "mauris. Pellentesque commodo..."
 msgstr ""
 
-#: sections/front-page-services.php:47
+#: sections/front-page-services.php:58
 msgid "Web Development"
 msgstr ""
 
-#: sections/front-page-services.php:48
+#: sections/front-page-services.php:59
 msgid "SEO Analisys"
 msgstr ""
 
-#: sections/front-page-team.php:46
+#: sections/front-page-team.php:57
 msgid "Mark Lawrance"
 msgstr ""
 
-#: sections/front-page-team.php:46
+#: sections/front-page-team.php:57
 msgid "Web Designer"
 msgstr ""
 
-#: sections/front-page-team.php:46
+#: sections/front-page-team.php:57
 msgid "Creative, detail-oriented, always focused."
 msgstr ""
 
-#: sections/front-page-team.php:47
+#: sections/front-page-team.php:58
 msgid "Jane  Stenton"
 msgstr ""
 
-#: sections/front-page-team.php:47
+#: sections/front-page-team.php:58
 msgid "SEO Specialist"
 msgstr ""
 
-#: sections/front-page-team.php:47
+#: sections/front-page-team.php:58
 msgid "Curious, tech-geeck and gets serious when it comes to work."
 msgstr ""
 
-#: sections/front-page-team.php:48
+#: sections/front-page-team.php:59
 msgid "John Smith"
 msgstr ""
 
-#: sections/front-page-team.php:48
+#: sections/front-page-team.php:59
 msgid "Developer"
 msgstr ""
 
-#: sections/front-page-team.php:48
+#: sections/front-page-team.php:59
 msgid "Enthusiastic, passionate with great sense of humor."
 msgstr ""
 
-#: sections/front-page-testimonials.php:76
-#: sections/front-page-testimonials.php:82
+#: sections/front-page-testimonials.php:81
 #: sections/front-page-testimonials.php:87
-#: sections/front-page-testimonials.php:93
+#: sections/front-page-testimonials.php:92
 #: sections/front-page-testimonials.php:98
-#: sections/front-page-testimonials.php:104
+#: sections/front-page-testimonials.php:103
 #: sections/front-page-testimonials.php:109
-#: sections/front-page-testimonials.php:115
+#: sections/front-page-testimonials.php:114
+#: sections/front-page-testimonials.php:120
 msgid "Jane Smith"
 msgstr ""
 
-#: sections/front-page-testimonials.php:79
-#: sections/front-page-testimonials.php:90
-#: sections/front-page-testimonials.php:101
-#: sections/front-page-testimonials.php:112
+#: sections/front-page-testimonials.php:84
+#: sections/front-page-testimonials.php:95
+#: sections/front-page-testimonials.php:106
+#: sections/front-page-testimonials.php:117
 msgid ""
-"Awesome theme with great design and helpfull support. If you don’t know how "
+"Awesome theme with great design and helpfull support. If you do not know how "
 "to code your own WordPress theme, but you still want a good-looking website "
 "for your business, Illdy might be exactly what you need. It is a slick theme "
 "with a lot of of features to choose from. You can customize whatever section "
 "you  want and you can rest assure that no matter what device your website is "
-"viewed on – it looks  great."
+"viewed on it looks  great."
 msgstr ""
 
 #: sidebar.php:22
-msgid "Recent Posts"
-msgstr ""
-
-#: sidebar.php:23
 msgid "Categories"
 msgstr ""
 
-#: sidebar.php:24
+#: sidebar.php:23
 msgid "Archive"
 msgstr ""
 
@@ -1270,181 +1571,14 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-page.php:21 template-parts/content-single.php:22
+#: template-parts/content-page.php:24 template-parts/content-single.php:26
 msgid "Pages:"
 msgstr ""
 
-#: widgets/class-widget-counter.php:8
-msgid "[Illdy] - Counter"
+#: woocommerce.php:34
+msgid "WooCommerce Title"
 msgstr ""
 
-#: widgets/class-widget-counter.php:8
-msgid "Add this widget in \"Front page - Counter Sidebar\"."
-msgstr ""
-
-#: widgets/class-widget-counter.php:46 widgets/class-widget-recent-posts.php:8
-#: widgets/class-widget-recent-posts.php:80
-msgid "[Illdy] - Recent Posts"
-msgstr ""
-
-#: widgets/class-widget-counter.php:47
-msgid "1"
-msgstr ""
-
-#: widgets/class-widget-counter.php:48
-msgid "260"
-msgstr ""
-
-#: widgets/class-widget-counter.php:49
-msgid "2000"
-msgstr ""
-
-#: widgets/class-widget-counter.php:50
-msgid "100"
-msgstr ""
-
-#: widgets/class-widget-counter.php:53 widgets/class-widget-person.php:123
-#: widgets/class-widget-project.php:59 widgets/class-widget-recent-posts.php:90
-#: widgets/class-widget-service.php:720 widgets/class-widget-skill.php:717
-msgid "Title:"
-msgstr ""
-
-#: widgets/class-widget-counter.php:58
-msgid "Data from:"
-msgstr ""
-
-#: widgets/class-widget-counter.php:59
-msgid "The number the element should start at."
-msgstr ""
-
-#: widgets/class-widget-counter.php:64
-msgid "Data to:"
-msgstr ""
-
-#: widgets/class-widget-counter.php:65
-msgid "The number the element should end at."
-msgstr ""
-
-#: widgets/class-widget-counter.php:70
-msgid "Data speed:"
-msgstr ""
-
-#: widgets/class-widget-counter.php:71
-msgid "How long it should take to count between the target numbers."
-msgstr ""
-
-#: widgets/class-widget-counter.php:76
-msgid "Data refresh interval:"
-msgstr ""
-
-#: widgets/class-widget-counter.php:77
-msgid "How often the element should be updated."
-msgstr ""
-
-#: widgets/class-widget-person.php:8 widgets/class-widget-person.php:112
-msgid "[Illdy] - Person"
-msgstr ""
-
-#: widgets/class-widget-person.php:8
-msgid "Add this widget in \"Front page - Team Sidebar\"."
-msgstr ""
-
-#: widgets/class-widget-person.php:128 widgets/class-widget-project.php:64
-msgid "Image:"
-msgstr ""
-
-#: widgets/class-widget-person.php:130 widgets/class-widget-project.php:66
-msgid "Upload Image"
-msgstr ""
-
-#: widgets/class-widget-person.php:134
-msgid "Position:"
-msgstr ""
-
-#: widgets/class-widget-person.php:139 widgets/class-widget-service.php:735
-msgid "Entry:"
-msgstr ""
-
-#: widgets/class-widget-person.php:144
-msgid "Facebook URL:"
-msgstr ""
-
-#: widgets/class-widget-person.php:149
-msgid "Twitter URL:"
-msgstr ""
-
-#: widgets/class-widget-person.php:154
-msgid "LinkedIn URL:"
-msgstr ""
-
-#: widgets/class-widget-person.php:159 widgets/class-widget-service.php:740
-#: widgets/class-widget-skill.php:737
-msgid "Color:"
-msgstr ""
-
-#: widgets/class-widget-project.php:8 widgets/class-widget-project.php:54
-msgid "[Illdy] - Project"
-msgstr ""
-
-#: widgets/class-widget-project.php:8
-msgid "Add this widget in \"Front page - Projects Sidebar\"."
-msgstr ""
-
-#: widgets/class-widget-project.php:70
-msgid "URL:"
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:8
-msgid ""
-"Thiw widget will display the latest posts with thumbnail image on the left "
-"side."
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:56
-msgid "More..."
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:63
-msgid "No posts found."
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:81
-msgid "4"
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:86
-msgid "Display title?"
-msgstr ""
-
-#: widgets/class-widget-recent-posts.php:95
-msgid "Number of posts:"
-msgstr ""
-
-#: widgets/class-widget-service.php:8
-msgid "[Illdy] - Service"
-msgstr ""
-
-#: widgets/class-widget-service.php:8
-msgid "Add this widget in \"Front page - Services Sidebar\"."
-msgstr ""
-
-#: widgets/class-widget-service.php:711 widgets/class-widget-skill.php:8
-#: widgets/class-widget-skill.php:708
-msgid "[Illdy] - Skill"
-msgstr ""
-
-#: widgets/class-widget-service.php:725 widgets/class-widget-skill.php:727
-msgid "Icon:"
-msgstr ""
-
-#: widgets/class-widget-service.php:727 widgets/class-widget-skill.php:729
-msgid "All Font Awesome Icons"
-msgstr ""
-
-#: widgets/class-widget-skill.php:8
-msgid "Add this widget in \"Front page - About Sidebar\"."
-msgstr ""
-
-#: widgets/class-widget-skill.php:722
-msgid "Percentage:"
+#: woocommerce.php:35
+msgid "Product Categories"
 msgstr ""

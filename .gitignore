@@ -26,6 +26,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
+*.orig
  
 # ignore log files and databases
 *.log
@@ -62,6 +63,7 @@ wp-content/themes/index.php
 
 !wp-content/plugins
 wp-content/plugins/askimet
+wp-content/plugins/cookie-notice
 wp-content/themes/illdy/node_modules/
 wp-content/plugins/index.php
 wp-content/plugins/hello.php

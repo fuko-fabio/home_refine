@@ -212,64 +212,11 @@
 		} );
 	} );
 
-	// First word from title
-	wp.customize( 'illdy_jumbotron_general_first_row_from_title', function( value ) {
-		value.bind( function( newval ) {
-			if( newval == '' ) {
-				$( '#header .bottom-header span.span-dot.first-span-dot' ).addClass( 'customizer-display-none' );
-			} else {
-				$( '#header .bottom-header span.span-dot.first-span-dot' ).removeClass( 'customizer-display-none' );
-			}
-
-			$( '#header .bottom-header h2 span[data-customizer="first-row-from-title"]' ).html( newval );
-		} );
-	} );
-
-	// Second word from title
-	wp.customize( 'illdy_jumbotron_general_second_row_from_title', function( value ) {
-		value.bind( function( newval ) {
-			if( newval == '' ) {
-				$( '#header .bottom-header span.span-dot.second-span-dot' ).addClass( 'customizer-display-none' );
-			} else {
-				$( '#header .bottom-header span.span-dot.second-span-dot' ).removeClass( 'customizer-display-none' );
-			}
-
-			$( '#header .bottom-header h2 span[data-customizer="second-row-from-title"]' ).html( newval );
-		} );
-	} );
-
-	// Third word from title
-	wp.customize( 'illdy_jumbotron_general_third_row_from_title', function( value ) {
-		value.bind( function( newval ) {
-			$( '#header .bottom-header h2 span[data-customizer="third-row-from-title"]' ).html( newval );
-		} );
-	} );
-
-	// Entry
-	wp.customize( 'illdy_jumbotron_general_entry', function( value ) {
-		value.bind( function( newval ) {
-			$( '#header .bottom-header p' ).html( newval );
-		} );
-	} );
-
-	// First button text
-	wp.customize( 'illdy_jumbotron_general_first_button_title', function( value ) {
-		value.bind( function( newval ) {
-			$( '#header .bottom-header .header-button-one' ).html( newval );
-		} );
-	} );
 
 	// First button URL
 	wp.customize( 'illdy_jumbotron_general_first_button_url', function( value ) {
 		value.bind( function( newval ) {
 			$( '#header .bottom-header .header-button-one' ).attr( 'href', newval );
-		} );
-	} );
-
-	// Second button text
-	wp.customize( 'illdy_jumbotron_general_second_button_title', function( value ) {
-		value.bind( function( newval ) {
-			$( '#header .bottom-header .header-button-two' ).html( newval );
 		} );
 	} );
 
