@@ -15,9 +15,9 @@ $general_contact_form_7    = get_theme_mod( 'illdy_contact_us_general_contact_fo
 $default_lang = pll_default_language('slug');
 $current_lang = pll_current_language('slug');
 if($current_lang != $default_lang){
-  $general_contact_form_7 = pll_get_post($form_id, $current_lang);
-  if(empty($form_id)){ 
-    $form_id = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
+  $general_contact_form_7 = pll_get_post($general_contact_form_7, $current_lang);
+  if(empty($general_contact_form_7)){ 
+    $general_contact_form_7 = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
   }
 }
 ?>
