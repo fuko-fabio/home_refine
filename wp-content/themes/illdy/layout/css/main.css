@@ -1108,7 +1108,7 @@ textarea, input {
     width: 320px;
     z-index: 10;
     display: none;
-    bottom: 100%
+    bottom: 100%;
     border: 1px solid #000;
 }
 
