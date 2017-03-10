@@ -1014,7 +1014,11 @@ textarea, input {
 #contact-us .section-content .contact-us-map {
 	padding-top: 22px;
 }
-
+#contact-us .section-content .contact-us-wechat-code {
+	width: 100%;
+    max-width: 260px;
+    padding-top: 40px;
+}
 #contact-us .section-content .contact-us-box .box-left {
 	width: auto;
 	margin: 0;
@@ -1105,7 +1109,7 @@ textarea, input {
 #contact-us .section-content .contact-us-social a > img.wechat-code {
     position: absolute;
     right: 0;
-    width: 320px;
+    width: 260px;
     z-index: 10;
     display: none;
     bottom: 100%;
