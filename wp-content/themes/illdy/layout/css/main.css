@@ -130,6 +130,15 @@ textarea, input {
 	position: relative;
 }
 
+#header .header-slider {
+	margin-top: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+	#header .header-slider {
+		margin-top: 75px;
+	}
+}
 #header .header-slider .bottom-header {
 	position: absolute;
 	top: 0;
@@ -158,6 +167,12 @@ textarea, input {
 #header .top-header .header-logo-img {
 	max-height: 54px;
 	padding: 4px 0;
+}
+
+@media only screen and (max-width: 992px) {
+#header .top-header .header-logo-img {
+	max-height: 70px;
+}
 }
 
 #header .top-header .header-logo:hover {
@@ -1342,6 +1357,19 @@ div.wpcf7-mail-sent-ok {
 
 #footer .copyright a:hover {
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+	#footer .copyright,
+	#footer .be-patron,
+	#footer .footer-copyright-company {
+		text-align: center;
+	}
+	
+	#footer .widget {
+	    padding-top: 20px;
+	    text-align: center;
+	}
 }
 
 #footer .widget .widget-title {
