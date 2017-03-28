@@ -127,6 +127,13 @@ textarea, input {
 /* 02. Header */
 #header {
 	width: 100%;
+	position: relative;
+}
+
+#header .header-slider .bottom-header {
+	position: absolute;
+	top: 0;
+	z-index: 10;	
 }
 
 #header .top-header {
