@@ -63,6 +63,7 @@ wp-content/themes/index.php
 
 !wp-content/plugins
 wp-content/plugins/askimet
+wp-content/plugins/responsive-header-image-slider
 wp-content/plugins/cookie-notice
 wp-content/themes/illdy/node_modules/
 wp-content/plugins/index.php
