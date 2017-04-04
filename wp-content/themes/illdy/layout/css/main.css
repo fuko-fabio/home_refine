@@ -130,27 +130,17 @@ textarea, input {
 	position: relative;
 }
 
-#header .header-slider {
-	margin-top: 25px;
-}
-
-@media only screen and (max-width: 992px) {
-	#header .header-slider {
-		margin-top: 75px;
-	}
-}
 #header .header-slider .bottom-header {
 	position: absolute;
-	top: 0;
-	z-index: 10;	
+	bottom: 10%;
+	z-index: 10;
+	padding: 0 !important;
 }
 
 #header .top-header {
-	width: 100%;
+	width: 100% !important;
 	background: #007e65;
-	position: fixed;
-	z-index: 9999;
-	top: 0;
+	z-index: 100 !important;
 }
 
 #header .top-header .header-logo {
@@ -383,6 +373,14 @@ textarea, input {
 #header .bottom-header .header-button-two:hover {
 	background: rgba(241, 210, 4, 0.9);
 	text-decoration: none;
+}
+
+#slides {
+	z-index: 0;	
+}
+
+#slides .slidesjs-container {
+	min-height: 200px;	
 }
 
 /* 03. About */
@@ -2428,7 +2426,6 @@ input {
 	.responsive-menu {
 		width: 100%;
 		background-color: #fff;
-		padding-top: 76px;
 		display: none;
 	}
 	.responsive-menu ul {

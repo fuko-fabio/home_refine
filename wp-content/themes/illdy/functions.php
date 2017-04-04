@@ -198,7 +198,7 @@ if ( ! function_exists( 'illdy_enqueue_stylesheets' ) ) {
 		wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/layout/css/bootstrap-theme.min.css', array(), '3.3.6', 'all' );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/layout/css/font-awesome.min.css', array(), '4.5.0', 'all' );
 		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/layout/css/owl-carousel.min.css', array(), '2.0.0', 'all' );
-		wp_enqueue_style( 'illdy-main', get_template_directory_uri() . '/layout/css/main.css', array(), '5.75', 'all' );
+		wp_enqueue_style( 'illdy-main', get_template_directory_uri() . '/layout/css/main.css', array(), '5.77', 'all' );
 		wp_enqueue_style( 'illdy-custom', get_template_directory_uri() . '/layout/css/custom.min.css', array(), '', 'all' );
 		wp_enqueue_style( 'illdy-style', get_stylesheet_uri(), array(), '1.0.17', 'all' );
 	}
@@ -430,4 +430,27 @@ function get_header_background_style() {
 		$style .= 'background-size:contain;background-repeat:no-repeat;';
 	}
 	return $style;
+}
+
+function get_header_navigation() {
+	?>
+	<nav class="responsive-menu">
+		<ul>
+			<?php
+			wp_nav_menu( array(
+				'theme_location'  => 'primary-menu',
+				'menu'            => '',
+				'container'       => '',
+				'container_class' => '',
+				'container_id'    => '',
+				'menu_class'      => '',
+				'menu_id'         => '',
+				'items_wrap'      => '%3$s',
+				'walker'          => new Illdy_Extended_Menu_Walker(),
+				'fallback_cb'     => 'Illdy_Extended_Menu_Walker::fallback',
+			) );
+			?>
+		</ul>
+	</nav><!--/.responsive-menu-->
+	<?php
 }
