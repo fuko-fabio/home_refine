@@ -33,6 +33,7 @@ class Illdy_Widget_Person extends WP_Widget {
             ( function( $ ){
                 function initColorPicker( widget ) {
                     widget.find( '.color-picker' ).wpColorPicker( {
+                        defaultColor : '#f1d204',
                         change: _.throttle( function() { // For Customizer
                             $(this).trigger( 'change' );
                         }, 3000 )
@@ -82,11 +83,11 @@ class Illdy_Widget_Person extends WP_Widget {
 
         $output .= '<div class="person clearfix" data-person-color="'. $color .'">';
             $output .= '<div class="person-image">';
-                $output .= ( $image_id ? '<img src="'. $get_attachment_image_src[0] .'" alt="'. $title .'" title="'. $title .'" />' : ( $image ? '<img src="'. get_template_directory_uri() . $image .'" alt="'. $title .'" title="'. $title .'" />' : '' ) );
+                $output .= ( $image_id ? '<img src="'. $get_attachment_image_src[0] .'" alt="'. $title .'" title="'. $title .'" />' : ( $image ? '<img src="'. $image .'" alt="'. $title .'" title="'. $title .'" />' : '' ) );
             $output .= '</div><!--/.person-image-->';
             $output .= '<div class="person-content">';
-                $output .= '<h4>'. $title .'</h4>';
-                $output .= '<h5>'. $position .'</h5>';
+                $output .= '<h6>'. $title .'</h6>';
+                $output .= '<p class="person-position">'. $position .'</p>';
                 $output .= '<p>'. $entry .'</p>';
                 $output .= '<ul class="person-content-social clearfix">';
                     $output .= ( $facebook_url ) ? '<li><a href="'. $facebook_url .'" title="'. __( 'Facebook', 'illdy' ) .'" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a></li>' : '';

@@ -20,7 +20,20 @@ abstract class PLL_Links_Abstract_Domain extends PLL_Links_Permalinks {
 		// Avoid cross domain requests ( mainly for custom fonts )
 		add_filter( 'content_url', array( $this, 'site_url' ) );
 		add_filter( 'plugins_url', array( $this, 'site_url' ) );
+		add_filter( 'rest_url', array( $this, 'site_url' ) );
 		add_filter( 'upload_dir', array( $this, 'upload_dir' ) );
+	}
+
+	/**
+	 * Sets the home urls
+	 *
+	 * @since 2.2
+	 *
+	 * @param object $language
+	 */
+	protected function set_home_url( $language ) {
+		$home_url = $this->home_url( $language );
+		$language->set_home_url( $home_url, $home_url ); // Search url and home url are the same
 	}
 
 	/**

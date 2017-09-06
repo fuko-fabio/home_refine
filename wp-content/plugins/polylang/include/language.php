@@ -47,8 +47,8 @@ class PLL_Language {
 	 *
 	 * @since 1.2
 	 *
-	 * @param object|array $language 'language' term or language object properties stored as an array
-	 * @param object $term_language corresponding 'term_language' term
+	 * @param object|array $language      'language' term or language object properties stored as an array
+	 * @param object       $term_language Corresponding 'term_language' term
 	 */
 	public function __construct( $language, $term_language = null ) {
 		// build the object from all properties stored as an array
@@ -80,7 +80,6 @@ class PLL_Language {
 			$this->description = &$this->locale; // backward compatibility with Polylang < 1.2
 
 			$this->mo_id = PLL_MO::get_id( $this );
-			$this->set_flag();
 		}
 	}
 
@@ -94,20 +93,21 @@ class PLL_Language {
 
 		// Polylang builtin flags
 		if ( ! empty( $this->flag_code ) && file_exists( POLYLANG_DIR . ( $file = '/flags/' . $this->flag_code . '.png' ) ) ) {
-			$flags['flag']['url'] = esc_url_raw( POLYLANG_URL . $file );
+			$flags['flag']['url'] = esc_url_raw( plugins_url( $file, POLYLANG_FILE ) );
 
 			// if base64 encoded flags are preferred
 			if ( ! defined( 'PLL_ENCODED_FLAGS' ) || PLL_ENCODED_FLAGS ) {
 				$flags['flag']['src'] = 'data:image/png;base64,' . base64_encode( file_get_contents( POLYLANG_DIR . $file ) );
 			} else {
-				$flags['flag']['src'] = esc_url( POLYLANG_URL . $file );
+				$flags['flag']['src'] = esc_url( plugins_url( $file, POLYLANG_FILE ) );
 			}
 		}
 
 		// custom flags ?
 		if ( file_exists( PLL_LOCAL_DIR . ( $file = '/' . $this->locale . '.png' ) ) || file_exists( PLL_LOCAL_DIR . ( $file = '/' . $this->locale . '.jpg' ) ) ) {
-			$flags['custom_flag']['url'] = esc_url_raw( PLL_LOCAL_URL . $file );
-			$flags['custom_flag']['src'] = esc_url( PLL_LOCAL_URL . $file );
+			$url = content_url( '/polylang' . $file );
+			$flags['custom_flag']['url'] = esc_url_raw( $url );
+			$flags['custom_flag']['src'] = esc_url( $url );
 		}
 
 		/**
@@ -194,7 +194,7 @@ class PLL_Language {
 
 	/**
 	 * set home_url scheme
-	 * this can't be cached accross pages
+	 * this can't be cached across pages
 	 *
 	 * @since 1.6.4
 	 */
@@ -236,7 +236,7 @@ class PLL_Language {
 				'roh'            => 'rm',
 				'srd'            => 'sc',
 				'tuk'            => 'tk',
-			 );
+			);
 			$locale = isset( $valid_locales[ $this->locale ] ) ? $valid_locales[ $this->locale ] : $this->locale;
 			return str_replace( '_', '-', $locale );
 		}

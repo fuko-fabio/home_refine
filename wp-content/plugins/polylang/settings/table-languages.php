@@ -1,7 +1,7 @@
 <?php
 
 if ( ! class_exists( 'WP_List_Table' ) ) {
-	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' ); // since WP 3.1
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php'; // since WP 3.1
 }
 
 /**
@@ -19,8 +19,8 @@ class PLL_Table_Languages extends WP_List_Table {
 	 */
 	function __construct() {
 		parent::__construct( array(
-			'plural'   => 'Languages', // Do not translate ( used for css class )
-			'ajax'	   => false,
+			'plural' => 'Languages', // Do not translate ( used for css class )
+			'ajax'   => false,
 		) );
 	}
 
@@ -83,7 +83,7 @@ class PLL_Table_Languages extends WP_List_Table {
 		return sprintf(
 			'<a title="%s" href="%s">%s</a>',
 			esc_attr__( 'Edit this language', 'polylang' ),
-			esc_url( admin_url( 'options-general.php?page=mlang&amp;pll_action=edit&amp;lang=' . $item->term_id ) ),
+			esc_url( admin_url( 'admin.php?page=mlang&amp;pll_action=edit&amp;lang=' . $item->term_id ) ),
 			esc_html( $item->name )
 		);
 	}
@@ -160,12 +160,23 @@ class PLL_Table_Languages extends WP_List_Table {
 	 */
 	function get_sortable_columns() {
 		return array(
-			'name'		    => array( 'name', true ), // sorted by name by default
-			'locale'      => array( 'locale', false ),
-			'slug'		    => array( 'slug', false ),
-			'term_group'  => array( 'term_group', false ),
-			'count'	      => array( 'count', false ),
+			'name'       => array( 'name', true ), // sorted by name by default
+			'locale'     => array( 'locale', false ),
+			'slug'       => array( 'slug', false ),
+			'term_group' => array( 'term_group', false ),
+			'count'      => array( 'count', false ),
 		);
+	}
+
+	/**
+	 * Gets the name of the default primary column.
+	 *
+	 * @since 2.1
+	 *
+	 * @return string Name of the default primary column, in this case, 'name'.
+	 */
+	protected function get_default_primary_column_name() {
+		return 'name';
 	}
 
 	/**
@@ -187,7 +198,7 @@ class PLL_Table_Languages extends WP_List_Table {
 			'edit'   => sprintf(
 				'<a title="%s" href="%s">%s</a>',
 				esc_attr__( 'Edit this language', 'polylang' ),
-				esc_url( admin_url( 'options-general.php?page=mlang&amp;pll_action=edit&amp;lang=' . $item->term_id ) ),
+				esc_url( admin_url( 'admin.php?page=mlang&amp;pll_action=edit&amp;lang=' . $item->term_id ) ),
 				esc_html__( 'Edit','polylang' )
 			),
 			'delete' => sprintf(
@@ -251,7 +262,7 @@ class PLL_Table_Languages extends WP_List_Table {
 
 		$this->set_pagination_args( array(
 			'total_items' => $total_items,
-			'per_page'	=> $per_page,
+			'per_page'    => $per_page,
 			'total_pages' => ceil( $total_items / $per_page ),
 		) );
 	}

@@ -16,8 +16,51 @@ class Jetpack_Sync_Functions {
 
 	public static function get_taxonomies() {
 		global $wp_taxonomies;
+		$wp_taxonomies_without_callbacks = array();
+		foreach ( $wp_taxonomies as $taxonomy_name => $taxonomy ) {
+			$sanitized_taxonomy = self::sanitize_taxonomy( $taxonomy );
+			if ( ! empty( $sanitized_taxonomy ) ) {
+				$wp_taxonomies_without_callbacks[ $taxonomy_name ] = $sanitized_taxonomy;
+	 		} else {
+				error_log( 'Jetpack: Encountered a recusive taxonomy:' . $taxonomy_name );
+			}
+		}
+		return $wp_taxonomies_without_callbacks;
+	}
 
-		return $wp_taxonomies;
+	public static function get_shortcodes() {
+		global $shortcode_tags;
+		return array_keys( $shortcode_tags );
+	}
+
+	/**
+	 * Removes any callback data since we will not be able to process it on our side anyways.
+	 */
+	public static function sanitize_taxonomy( $taxonomy ) {
+
+		// Lets clone the taxonomy object instead of modifing the global one.
+		$cloned_taxonomy = json_decode( wp_json_encode( $taxonomy ) );
+
+		// recursive taxonomies are no fun.
+		if ( is_null( $cloned_taxonomy ) ) {
+			return null;
+		}
+		// Remove any meta_box_cb if they are not the default wp ones.
+		if ( isset( $cloned_taxonomy->meta_box_cb ) &&
+		     ! in_array( $cloned_taxonomy->meta_box_cb, array( 'post_tags_meta_box', 'post_categories_meta_box' ) ) ) {
+			$cloned_taxonomy->meta_box_cb = null;
+		}
+		// Remove update call back
+		if ( isset( $cloned_taxonomy->update_count_callback ) &&
+		     ! is_null( $cloned_taxonomy->update_count_callback ) ) {
+			$cloned_taxonomy->update_count_callback = null;
+		}
+		// Remove rest_controller_class if it something other then the default.
+		if ( isset( $cloned_taxonomy->rest_controller_class )  &&
+		     'WP_REST_Terms_Controller' !== $cloned_taxonomy->rest_controller_class ) {
+			$cloned_taxonomy->rest_controller_class = null;
+		}
+		return $cloned_taxonomy;
 	}
 
 	public static function get_post_types() {
@@ -44,6 +87,9 @@ class Jetpack_Sync_Functions {
 		} 
 		if ( function_exists( 'is_wpe' ) || function_exists( 'is_wpe_snapshot' ) ) {
 			return 'wpe';
+		}
+		if ( defined( 'VIP_GO_ENV' ) && false !== VIP_GO_ENV ) {
+			return 'vip-go';
 		}
 		return 'unknown';
 	}
@@ -98,18 +144,53 @@ class Jetpack_Sync_Functions {
 		return false;
 	}
 
+	/**
+	 * Helper function that is used when getting home or siteurl values. Decides
+	 * whether to get the raw or filtered value.
+	 *
+	 * @return string
+	 */
+	public static function get_raw_or_filtered_url( $url_type ) {
+		if (
+			! Jetpack_Constants::is_defined( 'JETPACK_SYNC_USE_RAW_URL' ) ||
+			Jetpack_Constants::get_constant( 'JETPACK_SYNC_USE_RAW_URL' )
+		) {
+			$url = self::get_raw_url( $url_type );
+		} else {
+			$url_function = ( 'home' == $url_type )
+				? 'home_url'
+				: 'site_url';
+			$url = self::normalize_www_in_url( $url_type, $url_function );
+			$url = self::get_protocol_normalized_url( $url_function, $url );
+		}
+
+		return $url;
+	}
+
 	public static function home_url() {
-		return self::get_protocol_normalized_url(
-			'home_url',
-			self::normalize_www_in_url( 'home', 'home_url' )
-		);
+		$url = self::get_raw_or_filtered_url( 'home' );
+
+		/**
+		 * Allows overriding of the home_url value that is synced back to WordPress.com.
+		 *
+		 * @since 5.2
+		 *
+		 * @param string $home_url
+		 */
+		return esc_url_raw( apply_filters( 'jetpack_sync_home_url', $url ) );
 	}
 
 	public static function site_url() {
-		return self::get_protocol_normalized_url(
-			'site_url',
-			self::normalize_www_in_url( 'siteurl', 'site_url' )
-		);
+		$url = self::get_raw_or_filtered_url( 'siteurl' );
+
+		/**
+		 * Allows overriding of the site_url value that is synced back to WordPress.com.
+		 *
+		 * @since 5.2
+		 *
+		 * @param string $site_url
+		 */
+		return esc_url_raw( apply_filters( 'jetpack_sync_site_url', $url ) );
 	}
 
 	public static function main_network_site_url() {
@@ -136,6 +217,23 @@ class Jetpack_Sync_Functions {
 		$forced_scheme =  in_array( 'https', $scheme_history ) ? 'https' : 'http';
 
 		return set_url_scheme( $new_value, $forced_scheme );
+	}
+
+	public static function get_raw_url( $option_name ) {
+		$value = null;
+		$constant = ( 'home' == $option_name )
+			? 'WP_HOME'
+			: 'WP_SITEURL';
+
+		if ( Jetpack_Constants::is_defined( $constant ) ) {
+			$value = Jetpack_Constants::get_constant( $constant );
+		} else {
+			// Let's get the option from the database so that we can bypass filters. This will help
+			// ensure that we get more uniform values.
+			$value = Jetpack_Options::get_raw_option( $option_name );
+		}
+
+		return $value;
 	}
 
 	public static function normalize_www_in_url( $option, $url_function ) {

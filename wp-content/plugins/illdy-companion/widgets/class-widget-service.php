@@ -39,14 +39,20 @@ class Illdy_Widget_Service extends WP_Widget {
             ( function( $ ){
                 function initColorPicker( widget ) {
                     widget.find( '.color-picker' ).wpColorPicker( {
+                        defaultColor : '#f1d204',
                         change: _.throttle( function() { // For Customizer
                             $(this).trigger( 'change' );
                         }, 3000 )
                     });
                 }
 
+                function initIconPicker( widget ) {
+                    widget.find( '.fontawesome-picker' ).fontIconPicker();
+                }
+
                 function onFormUpdate( event, widget ) {
                     initColorPicker( widget );
+                    initIconPicker( widget );
                 }
 
                 $( document ).on( 'widget-added widget-updated', onFormUpdate );
@@ -55,6 +61,9 @@ class Illdy_Widget_Service extends WP_Widget {
                     $( '#widgets-right .widget:has(.color-picker)' ).each( function () {
                         initColorPicker( $( this ) );
                     } );
+                    $('#widgets-right .widget:has(.fontawesome-picker)').each( function(){
+                        initIconPicker( $(this) );
+                    } )
                 } );
             }( jQuery ) );
         </script>
@@ -89,9 +98,9 @@ class Illdy_Widget_Service extends WP_Widget {
         );
 
         $title = ( !empty( $instance['title'] ) ? esc_html( $instance['title'] ) : '' );
-        $icon = ( !empty( $instance['icon'] ) ? esc_attr( $instance['icon'] ) : '' );
+        $icon  = ( !empty( $instance['icon'] ) ? esc_attr( $instance['icon'] ) : '' );
         $entry = ( !empty( $instance['entry'] ) ? wp_kses( $instance['entry'], $allowed_html ) : '' );
-        $color = ( !empty( $instance['color'] ) ? esc_attr( $instance['color'] ) : '#000000' );
+        $color = ( !empty( $instance['color'] ) ? esc_attr( $instance['color'] ) : '#0385d0' );
 
         $output = '';
 
@@ -99,9 +108,9 @@ class Illdy_Widget_Service extends WP_Widget {
             $output .= '<div class="service-icon">';
                   $output .= '<i class="fa '. $icon .'"></i>';
             $output .= '</div><!--/.service-icon-->';
-            $output .= '<div class="service-title">';
+            $output .= '<div class="service-title"><h5>';
                   $output .= $title;
-            $output .= '</div><!--/.service-title-->';
+            $output .= '</h5></div><!--/.service-title-->';
             $output .= '<div class="service-entry">';
                 $output .= $entry;
             $output .= '</div><!--/.service-entry-->';
@@ -754,10 +763,10 @@ class Illdy_Widget_Service extends WP_Widget {
 
         <p>
             <label for="<?php echo $this->get_field_id( 'icon' ); ?>"><?php _e( 'Icon:', 'illdy' ); ?></label>
-            <select class="widefat" id="<?php echo $this->get_field_id( 'icon' ); ?>" name="<?php echo $this->get_field_name( 'icon' ); ?>">
+            <select class="widefat fontawesome-picker" id="<?php echo $this->get_field_id( 'icon' ); ?>" name="<?php echo $this->get_field_name( 'icon' ); ?>">
                 <option value="all-font-awesome-icons"><?php _e( 'All Font Awesome Icons', 'illdy' ); ?></option>
                 <?php foreach( $get_fontawesome_icons as $key => $get_fontawesome_icon ): ?>
-                    <option value="<?php echo esc_attr( $key ); ?>" <?php selected( $icon, $key ); ?>><?php echo esc_html( $get_fontawesome_icon ); ?></option>
+                    <option value="fa <?php echo esc_attr( $key ); ?>" <?php selected( $icon, 'fa '.$key ); ?>>fa <?php echo esc_html( $get_fontawesome_icon ); ?></option>
                 <?php endforeach; ?>
             </select>
         </p>

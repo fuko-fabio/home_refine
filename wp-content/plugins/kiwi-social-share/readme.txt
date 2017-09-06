@@ -1,16 +1,17 @@
-=== Plugin Name ===
-Contributors: cristian.raiber, silkalns, machothemes, c0sm1n87
+﻿=== Plugin Name ===
+
+Contributors: cristian.raiber, silkalns
 Tags: Facebook, facebook connect, facebook like, facebook share, facebook share icon, floating buttons, floating share, floating share icons, follow, google, Google Login, google plus, icons, increase shares, linkedin, linkedin share, media, page, pinterest, pinterest button, pinterest share, plugin, post to social networks, Reddit, reddit share, reddit sharing, Share, share button, share buttons, share counter, share icons, share links, share page, share post, sharebar, sharing, sharing icons, social, social app, social buttons, social comment, social comment facebook, social connect, social floating icons, social follow, social icon, social icons, social media, social media app, social media buttons, Social Media Plugins, social media share, social media sharing, social media tools, social network share, Social Plugins, social provider, social share, Social Share Buttons, social share icon, social share icons, social sharing, social sharing icons, social widget, stumbleupon sharing, tumblr share, tumblr sharing, twitter, twitter share, woocommerce, woocommerce connect, woocommerce sharing, yahoo
 Requires at least: 3.8
-Tested up to: 4.7
-Stable tag: 1.0.1
+Tested up to: 4.8
+Stable tag: 2.0.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-This is by far the best free WordPress share plugin. It is simple yet does exactly what it should with plenty of customisation options. 
+This is by far the best free WordPress share plugin. It is simple yet does exactly what it should with plenty of customisation options.
 == Description ==
 
-This is by far the best & easiest to use WordPress social media share plugin. A WordPress share plugin with custom icons built-in. 
+This is by far the best & easiest to use WordPress social media share plugin. A WordPress share plugin with custom icons built-in.
 
 
 = Plugin Options =
@@ -27,20 +28,17 @@ This is by far the best & easiest to use WordPress social media share plugin. A 
 * The eye-catching approach, leaf style (like a leaf in the wind).
 * Display social icons: before content, after content or both.
 * Display social icons on: posts or pages.
-* They come in 3 different sizes: large, medium & small.
-* SVG icons used for perfectly crisp rendering on all devices.
-* Only 2 HTTP request on the front-end to render the social sharing icons.
-* Amazing loading speed because it only uses 2 files.
+* Amazing loading speed.
 
-= WordPress Social Media Widget (for website) = 
+= WordPress Social Media Widget (for website) =
 
 A WordPress Social Media Widget solution is coming soon, stay tuned.
 
 **About us:**
 
-We are a young team of WordPress aficionados who love building WordPress plugins & <a href="https://www.machothemes.com/" rel="friend" target="_blank" title="Profesisonal WordPress themes">Professional WordPress themes</a> over on our theme shop. We’re also blogging and wish to help our users find the best <a rel="friend" href="https://www.machothemes.com/blog/cheap-wordpress-hosting/" target="_blank" title="Cheap WordPress Hosting">Cheap WordPress hosting</a> & the best <a href="https://www.machothemes.com/blog/best-free-wordpress-bootstrap-themes/" title="Bootstrap WordPress themes" target="_blank" rel="friend">Bootstrap WordPress Themes</a>.
- 
- 
+We are a young team of WordPress aficionados who love building WordPress plugins & <a href="https://www.machothemes.com/" rel="friend" target="_blank" title="Premium WordPress themes">Premium WordPress themes</a> over on our theme shop. We’re also blogging and wish to help our users find the best <a rel="friend" href="https://www.machothemes.com/blog/cheap-wordpress-hosting/" target="_blank" title="Cheap WordPress Hosting">Cheap WordPress hosting</a> & the best <a href="https://www.machothemes.com/blog/best-free-wordpress-bootstrap-themes/" title="Bootstrap WordPress themes" target="_blank" rel="friend">Bootstrap WordPress Themes</a>.
+
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -54,11 +52,42 @@ This section describes how to install the plugin and get it working.
 
 1. Screenshot of the back-end User Interface. All options are displayed above the fold (no scrolling, no fiddling around). Really easy to use.
 
+== Frequently Asked Questions ==
 
+Available filters (used for frontend rendering)
+Article Bar Filters
+    kiwi_article_bar_list_custom_class
+    kiwi_before_article_bar
+    kiwi_before_first_article_bar_item
+    kiwi_after_last_article_bar_item
+    kiwi_after_article_bar
+
+Floating Bar Filters
+    kiwi_floating_bar_list_custom_class
+    kiwi_before_floating_bar
+    kiwi_before_first_floating_bar_item
+    kiwi_after_last_floating_bar_item
+    kiwi_after_floating_bar
 
 
 
 == Changelog ==
+= 2.0.4 =
+* Removed box shadow in the admin window
+* Changed how URLS are encoded for text
+* WhatsApp icon visibility is now handled with CSS ( wp_is_mobile function would not work on websites with cache )
+
+= 2.0.3 =
+* Saving settings would cause errors on some servers
+
+= 2.0.2 =
+* Ajax request failed on license activation
+
+= 2.0.1 =
+* Minor bugs
+
+= 2.0.0 =
+* Major upgrade
 
 = 1.0.4 =
 * When checked, the Google+ icon wasn’t showing up. Fix provided via GitHub by @smartinsalmeida

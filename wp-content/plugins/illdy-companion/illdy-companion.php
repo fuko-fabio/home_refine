@@ -3,7 +3,7 @@
  * Plugin Name:       Illdy Companion
  * Plugin URI:        https://colorlib.com/wp/themes/illdy/
  * Description:       Illdy Companion is a companion for Illdy theme.
- * Version:           1.0.4
+ * Version:           1.0.7
  * Author:            Colorlib
  * Author URI:        https://colorlib.com/
  * License:           GPL-2.0+
@@ -14,6 +14,50 @@
 
 define( 'ILLDY_COMPANION', '1.0.4' );
 
+add_filter( 'illdy_required_actions', 'illdy_companion_add_import_action' );
+
+function illdy_companion_check_content_import() {
+	$illdy_content = get_option( 'illdy_show_required_actions' );
+	if ( $illdy_content ) {
+		return true;
+	}
+
+	return false;
+}
+
+function illdy_companion_add_import_action( $actions ) {
+
+	$html = '<div id="demo_content">';
+
+	$html .= '<a href="#" class="button button-primary" data-action="import-all">'.__( 'I want my site to look like your demo', 'illdy-companion' ).'</a><span class="spinner"></span> ';
+
+	$html .= '<a href="#" class="button button-secondary" data-action="import-customizer">'.__( 'Import Customizer Setting', 'illdy-companion' ).'</a><span class="spinner"></span> ';
+	$html .= '<a href="#" class="button button-secondary" data-action="import-widgets">'.__( 'Import Widgets', 'illdy-companion' ).'</a><span class="spinner"></span> ';
+	$html .= '<div class="updated-message"><p>'.__( 'Content Imported', 'illdy-companion' ).'</p></div>';
+	$html .= '</div>';
+
+	$actions[] = array(
+					"id"          => 'illdy-req-ac-static',
+					"title"       => esc_html__( 'Set front page to static', 'illdy-companion' ),
+					"description" => esc_html__( 'If you just installed Illdy, and are not able to see the front-page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page".', 'illdy-companion' ),
+					"help"        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a>. <br/><br/> <a class="button button-secondary" target="_blank"  href="' . self_admin_url( 'options-reading.php' ) . '">' . __( 'Set manually', 'illdy-companion' ) . '</a> <a id="set-static-page" class="button button-primary"  href="#">' . __( 'Set automatically', 'illdy' ) . '</a><span class="spinner frontpage-spinner"></span><div class="updated-message"><p>'.__( 'Static Front Page setted', 'illdy-companion' ).'</p></div>',
+					"check"       => MT_Notify_System::is_not_static_page()
+				);
+
+	$actions[] = array(
+					"id"          => 'illdy-req-ac-import-demo-content',
+					"title"       => esc_html__( 'Import Demo Content', 'illdy-companion' ),
+					"description" => esc_html__( 'You have 3 different options. The quickest way to set-up this theme is if you click the big blue button and "make your website look like our demo". If you know what you\'re doing, you can manually import the demo settings for the customizer as well as for the widgets.', 'illdy-companion' ),
+					"help"        => $html,
+					"check"       => illdy_companion_check_content_import()
+				);
+
+	
+
+	return $actions;
+
+}
+
 /**
  * Plugin companion widgets
  */
@@ -23,6 +67,8 @@ require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-project.php';
 require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-service.php';
 require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-counter.php';
 require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-person.php';
+require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-parallax.php';
+require_once plugin_dir_path( __FILE__ ) . 'widgets/class-widget-testimonial.php';
 
 if ( ! function_exists( 'illdy_companion_add_default_widgets' ) ) {
 	/**
@@ -32,7 +78,7 @@ if ( ! function_exists( 'illdy_companion_add_default_widgets' ) ) {
 	 * @link https://github.com/stevengliebe/widget-importer-exporter
 	 */
 	function illdy_companion_add_default_widgets() {
-		$json             = '{"footer-sidebar-1":{"text-5":{"title":"PRODUCTS","text":"<ul><li><a href=\"#\" title=\"Our work\">Our work<\/a><\/li><li><a href=\"#\" title=\"Club\">Club<\/a><\/li><li><a href=\"#\" title=\"News\">News<\/a><\/li><li><a href=\"#\" title=\"Announcement\">Announcement<\/a><\/li><\/ul>","filter":false}},"footer-sidebar-2":{"text-6":{"title":"INFORMATION","text":"<ul><li><a href=\"#\" title=\"Pricing\">Pricing<\/a><\/li><li><a href=\"#\" title=\"Terms\">Terms<\/a><\/li><li><a href=\"#\" title=\"Affiliates\">Affiliates<\/a><\/li><li><a href=\"#\" title=\"Blog\">Blog<\/a><\/li><\/ul>","filter":false}},"footer-sidebar-3":{"text-7":{"title":"SUPPORT","text":"<ul><li><a href=\"#\" title=\"Documentation\">Documentation<\/a><\/li><li><a href=\"#\" title=\"FAQs\">FAQs<\/a><\/li><li><a href=\"#\" title=\"Forums\">Forums<\/a><\/li><li><a href=\"#\" title=\"Contact\">Contact<\/a><\/li><\/ul>","filter":false}},"front-page-about-sidebar":{"illdy_skill-2":{"title":"Typography","percentage":60,"icon":"fa-font","color":"#f18b6d"},"illdy_skill-3":{"title":"Design","percentage":82,"icon":"fa-pencil","color":"#f1d204"},"illdy_skill-4":{"title":"Development","percentage":86,"icon":"fa-code","color":"#6a4d8a"}},"front-page-projects-sidebar":{"illdy_project-3":{"title":"Project 1","image":"\/layout\/images\/front-page\/front-page-project-1.jpg","url":"#"},"illdy_project-4":{"title":"Project 2","image":"\/layout\/images\/front-page\/front-page-project-2.jpg","url":"#"},"illdy_project-5":{"title":"Project 3","image":"\/layout\/images\/front-page\/front-page-project-3.jpg","url":"#"},"illdy_project-6":{"title":"Project 4","image":"\/layout\/images\/front-page\/front-page-project-4.jpg","url":"#"}},"front-page-services-sidebar":{"illdy_service-2":{"title":"Web Design","icon":"fa-pencil","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#f18b6d"},"illdy_service-3":{"title":"WEB DEVELOPMENT","icon":"fa-code","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#f1d204"},"illdy_service-4":{"title":"SEO Analisys","icon":"fa-search","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#6a4d8a"}},"front-page-counter-sidebar":{"illdy_counter-4":{"title":"Projects","data_from":1,"data_to":260,"data_speed":2000,"data_refresh_interval":100},"illdy_counter-3":{"title":"Clients","data_from":1,"data_to":120,"data_speed":2000,"data_refresh_interval":100},"illdy_counter-2":{"title":"Coffes","data_from":1,"data_to":260,"data_speed":2000,"data_refresh_interval":100}},"front-page-team-sidebar":{"illdy_person-5":{"title":"Mark Lawrance","image":"\/layout\/images\/front-page\/front-page-team-1.jpg","position":"Web Designer","entry":"Creative, detail-oriented, always focused.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#f18b6d"},"illdy_person-4":{"title":"Jane  Stenton","image":"\/layout\/images\/front-page\/front-page-team-2.jpg","position":"SEO Specialist","entry":"Curious, tech-geeck and gets serious when it comes to work.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#f1d204"},"illdy_person-2":{"title":"John Smith","image":"\/layout\/images\/front-page\/front-page-team-3.jpg","position":"Developer","entry":"Enthusiastic, passionate with great sense of humor.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#6a4d8a"}}}';
+		$json = '{"footer-sidebar-1":{"text-5":{"title":"PRODUCTS","text":"<ul><li><a href=\"#\" title=\"Our work\">Our work<\/a><\/li><li><a href=\"#\" title=\"Club\">Club<\/a><\/li><li><a href=\"#\" title=\"News\">News<\/a><\/li><li><a href=\"#\" title=\"Announcement\">Announcement<\/a><\/li><\/ul>","filter":false}},"footer-sidebar-2":{"text-6":{"title":"INFORMATION","text":"<ul><li><a href=\"#\" title=\"Pricing\">Pricing<\/a><\/li><li><a href=\"#\" title=\"Terms\">Terms<\/a><\/li><li><a href=\"#\" title=\"Affiliates\">Affiliates<\/a><\/li><li><a href=\"#\" title=\"Blog\">Blog<\/a><\/li><\/ul>","filter":false}},"footer-sidebar-3":{"text-7":{"title":"SUPPORT","text":"<ul><li><a href=\"#\" title=\"Documentation\">Documentation<\/a><\/li><li><a href=\"#\" title=\"FAQs\">FAQs<\/a><\/li><li><a href=\"#\" title=\"Forums\">Forums<\/a><\/li><li><a href=\"#\" title=\"Contact\">Contact<\/a><\/li><\/ul>","filter":false}},"front-page-about-sidebar":{"illdy_skill-2":{"title":"Typography","percentage":60,"icon":"fa fa-font","color":"#f18b6d"},"illdy_skill-3":{"title":"Design","percentage":82,"icon":"fa fa-pencil","color":"#f1d204"},"illdy_skill-4":{"title":"Development","percentage":86,"icon":"fa fa-code","color":"#6a4d8a"}},"front-page-projects-sidebar":{"illdy_project-3":{"title":"Project 1","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-project-1.jpg","url":""},"illdy_project-4":{"title":"Project 2","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-project-2.jpg","url":""},"illdy_project-5":{"title":"Project 3","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-project-3.jpg","url":""},"illdy_project-6":{"title":"Project 4","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-project-4.jpg","url":""}},"front-page-services-sidebar":{"illdy_service-2":{"title":"Web Design","icon":"fa fa-pencil","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#f18b6d"},"illdy_service-3":{"title":"WEB DEVELOPMENT","icon":"fa fa-code","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#f1d204"},"illdy_service-4":{"title":"SEO Analisys","icon":"fa fa-search","entry":"Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...","color":"#6a4d8a"}},"front-page-counter-sidebar":{"illdy_counter-4":{"title":"Projects","data_from":1,"data_to":260,"data_speed":2000,"data_refresh_interval":100},"illdy_counter-3":{"title":"Clients","data_from":1,"data_to":120,"data_speed":2000,"data_refresh_interval":100},"illdy_counter-2":{"title":"Coffes","data_from":1,"data_to":260,"data_speed":2000,"data_refresh_interval":100}},"front-page-team-sidebar":{"illdy_person-5":{"title":"Mark Lawrance","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-team-1.jpg","position":"Web Designer","entry":"Creative, detail-oriented, always focused.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#f18b6d"},"illdy_person-4":{"title":"Jane Stenton","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-team-2.jpg","position":"SEO Specialist","entry":"Curious, tech-geeck and gets serious when it comes to work.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#f1d204"},"illdy_person-2":{"title":"John Smith","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-team-3.jpg","position":"Developer","entry":"Enthusiastic, passionate with great sense of humor.","facebook_url":"#","twitter_url":"#","linkedin_url":"#","color":"#6a4d8a"}},"front-page-testimonials-sidebar":{"illdy_testimonial-1":{"name":"Jane Smith","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-testimonial-1.jpg","testimonial":"                    Awesome theme with great design and helpfull support. If you don\u2019t know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you want and you can rest assure that no matter what device your website is viewed on \u2013 it looks great.            "},"illdy_testimonial-2":{"name":"Jane Smith","image":"\/wp-content\/themes\/illdy\/layout\/images\/front-page\/front-page-testimonial-1.jpg","testimonial":"                    Awesome theme with great design and helpfull support. If you don\u2019t know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you want and you can rest assure that no matter what device your website is viewed on \u2013 it looks great.            "}}}';
 		$config           = json_decode( $json );
 		$sidebars_widgets = get_option( 'sidebars_widgets' );
 		# Parse config
@@ -115,7 +161,7 @@ if ( ! function_exists( 'illdy_companion_add_default_customizer' ) ) {
 			'_counter_background_type'                   => 'image',
 			'_counter_background_image'                  => esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-counter.jpg' ),
 			'_counter_background_color'                  => '#000000',
-			'_jumbotron_general_image'                   => esc_url_raw( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' ),
+			'_jumbotron_general_image'                   => esc_url_raw( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' ),
 			'_jumbotron_general_first_row_from_title'    => __( 'Clean', 'illdy-companion' ),
 			'_jumbotron_general_second_row_from_title'   => __( 'Slick', 'illdy-companion' ),
 			'_jumbotron_general_third_row_from_title'    => __( 'Pixel Perfect', 'illdy-companion' ),
@@ -166,6 +212,10 @@ if ( ! function_exists( 'illdy_companion_admin_scripts' ) ) {
 	function illdy_companion_admin_scripts() {
 
 		wp_enqueue_style( 'illdy-companion-admin-css', plugins_url( '/css/admin.css', __FILE__ ) );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/layout/css/font-awesome.min.css', array(), '4.5.0', 'all' );
+		wp_enqueue_style( 'illdy-companion-iconpicker-css', plugins_url( '/css/jquery.fonticonpicker.css', __FILE__ ) );
+		wp_enqueue_style( 'illdy-companion-iconpicker-theme-css', plugins_url( '/css/jquery.fonticonpicker.grey.min.css', __FILE__ ) );
+		wp_enqueue_script( 'illdy-companion-iconpicker-js', plugins_url( '/js/jquery.fonticonpicker.min.js', __FILE__ ), array( 'jquery' ) );
 		wp_enqueue_script( 'illdy-companion-admin-js', plugins_url( '/js/admin.js', __FILE__ ), array( 'jquery' ) );
 
 		wp_localize_script( 'illdy-companion-admin-js', 'illdyCompanion', array(
@@ -176,15 +226,27 @@ if ( ! function_exists( 'illdy_companion_admin_scripts' ) ) {
 	add_action( 'admin_enqueue_scripts', 'illdy_companion_admin_scripts' );
 }
 
-if ( ! function_exists( 'illdy_companion_demo_tab' ) ) {
+if ( ! function_exists( 'illdy_companion_customizer_scripts' ) ) {
 
-	function illdy_companion_demo_tab() {
-		include 'illdy-demo-content.php';
+	/**
+	 * Function to enqueue admin resources - CSS/JS
+	 */
+	function illdy_companion_customizer_scripts() {
+
+		wp_enqueue_style( 'illdy-companion-iconpicker-css', plugins_url( '/css/jquery.fonticonpicker.css', __FILE__ ) );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/layout/css/font-awesome.min.css', array(), '4.5.0', 'all' );
+		wp_enqueue_script( 'illdy-companion-iconpicker-js', plugins_url( '/js/jquery.fonticonpicker.min.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_style( 'illdy-companion-iconpicker-theme-css', plugins_url( '/css/jquery.fonticonpicker.grey.min.css', __FILE__ ) );
+		wp_enqueue_script( 'illdy-companion-admin-js', plugins_url( '/js/admin.js', __FILE__ ), array( 'jquery' ), '', true );
+
+		wp_localize_script( 'illdy-companion-admin-js', 'illdyCompanion', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		) );
 	}
 
-	// hook our function
-	add_action( 'illdy_welcome', 'illdy_companion_demo_tab' );
+	add_action( 'customize_controls_enqueue_scripts', 'illdy_companion_customizer_scripts' );
 }
+
 
 if ( ! function_exists( 'illdy_companion_import_content' ) ) {
 
@@ -237,6 +299,31 @@ if ( ! function_exists( 'illdy_companion_import_content' ) ) {
 	add_action( 'wp_ajax_illdy_companion_import_content', 'illdy_companion_import_content' );
 }
 
+if ( ! function_exists( 'illdy_companion_set_static_frontpage' ) ) {
+
+function illdy_companion_set_static_frontpage() {
+
+	$frontpage_args = array(
+	    'post_title'    => __( 'Homepage', 'illdy-companion' ),
+	    'post_status'   => 'publish',
+	    'post_author'   => 1,
+	    'post_type'		=> 'page'
+	);
+	 
+	$page_id = wp_insert_post( $frontpage_args );
+	
+	update_option( 'show_on_front', 'page' );
+	update_option( 'page_on_front', $page_id );
+
+	echo 'succes';
+	exit();
+
+}
+
+add_action( 'wp_ajax_illdy_companion_set_frontpage', 'illdy_companion_set_static_frontpage' );
+
+}
+
 if ( ! function_exists( 'illdy_companion_customize_register' ) ) {
 	/**
 	 * Function that adds back the customizer sections we were asked to remove from the theme
@@ -251,34 +338,36 @@ if ( ! function_exists( 'illdy_companion_customize_register' ) ) {
 		if ( ! $wp_customize->get_setting( $prefix . '_services_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_services_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'In order to help you grow your business, our carefully selected experts can advise you in in the following areas:', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_services_general_entry', array(
+			$wp_customize->add_control(  new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_services_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'Add the content for this section.', 'illdy-companion' ),
 				'section'     => $prefix . '_panel_services',
 				'priority'    => 3,
 				'type'        => 'textarea',
-			) );
+			) ) );
 
 		}
 
 		if ( ! $wp_customize->get_setting( $prefix . '_team_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_team_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'Meet the people that are going to take your business to the next level.', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_team_general_entry', array(
+			$wp_customize->add_control(  new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_team_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'Add the content for this section.', 'illdy-companion' ),
 				'section'     => $prefix . '_panel_team',
 				'priority'    => 3,
 				'type'        => 'textarea',
-			) );
+			) ) );
 
 		}
 
@@ -286,17 +375,17 @@ if ( ! function_exists( 'illdy_companion_customize_register' ) ) {
 		if ( ! $wp_customize->get_setting( $prefix . '_about_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_about_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'It is an amazing one-page theme with great features that offers an incredible experience. It is easy to install, make changes, adapt for your business. A modern design with clean lines and styling for a wide variety of content, exactly how a business design should be. You can add as many images as you want to the main header area and turn them into slider.', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_about_general_entry', array(
+			$wp_customize->add_control(  new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_about_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'Add the content for this section.', 'illdy-companion' ),
 				'section'     => $prefix . '_panel_about',
 				'priority'    => 3,
-				'type'        => 'textarea',
-			) );
+			) ) );
 
 		}
 
@@ -304,17 +393,17 @@ if ( ! function_exists( 'illdy_companion_customize_register' ) ) {
 		if ( ! $wp_customize->get_setting( $prefix . '_jumbotron_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_jumbotron_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'lldy is a great one-page theme, perfect for developers and designers but also for someone who just wants a new website for his business. Try it now!', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_jumbotron_general_entry', array(
+			$wp_customize->add_control(  new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_jumbotron_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'The content added in this field will show below title.', 'illdy-companion' ),
 				'section'     => $prefix . '_jumbotron_general',
 				'priority'    => 5,
-				'type'        => 'textarea',
-			) );
+			) ) );
 
 		}
 
@@ -322,39 +411,68 @@ if ( ! function_exists( 'illdy_companion_customize_register' ) ) {
 		if ( ! $wp_customize->get_setting( $prefix . '_latest_news_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_latest_news_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'If you are interested in the latest articles in the industry, take a sneak peek at our blog. You have nothing to loose!', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_latest_news_general_entry', array(
+			$wp_customize->add_control(  new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_latest_news_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'Add the content for this section.', 'illdy-companion' ),
 				'section'     => $prefix . '_latest_news_general',
 				'priority'    => 3,
-				'type'        => 'textarea',
-			) );
+			) ) );
 
 		}
 
 		if ( ! $wp_customize->get_setting( $prefix . '_projects_general_entry' ) ) {
 
 			$wp_customize->add_setting( $prefix . '_projects_general_entry', array(
-				'sanitize_callback' => 'illdy_sanitize_html',
+				'sanitize_callback' => 'wp_kses_post',
 				'default'           => __( 'You\'ll love our work. Check it out!', 'illdy-companion' ),
 				'transport'         => 'postMessage',
 			) );
-			$wp_customize->add_control( $prefix . '_projects_general_entry', array(
+			$wp_customize->add_control( new Epsilon_Editor_Custom_Control(
+        		$wp_customize, $prefix . '_projects_general_entry', array(
 				'label'       => __( 'Entry', 'illdy-companion' ),
 				'description' => __( 'Add the content for this section.', 'illdy-companion' ),
-				'section'     => $prefix . '_projects_general',
+				'section'     => $prefix . '_panel_projects',
 				'priority'    => 3,
-				'type'        => 'textarea',
-			) );
+			) ) );
 
+		}
+
+		if ( ! $wp_customize->get_setting( $prefix . '_contact_us_entry' ) ) {
+			$wp_customize->add_setting( $prefix .'_contact_us_entry',
+		        array(
+		            'sanitize_callback' => 'wp_kses_post',
+		            'default'           => __( 'And we will get in touch as soon as possible.', 'illdy' ),
+		            'transport'         => 'postMessage'
+		        )
+		    );
+		    $wp_customize->add_control( new Epsilon_Editor_Custom_Control(
+        		$wp_customize, 
+		        $prefix .'_contact_us_entry',
+		        array(
+		            'label'         => __( 'Entry', 'illdy' ),
+		            'description'   => __( 'Add the content for this section.', 'illdy'),
+		            'section'       => $prefix . '_contact_us',
+		            'priority'      => 3,
+		        ) )
+		    );
 		}
 
 	}
 
 	// hook our function
-	add_action( 'customize_register', 'illdy_companion_customize_register' );
+	add_action( 'customize_register', 'illdy_companion_customize_register', 20 );
 }
+function illdy_get_attachment_image() {
+	$id  = intval( $_POST['attachment_id'] );
+	$src = wp_get_attachment_image_src( $id, 'full', false );
+	if ( ! empty( $src[0] ) ) {
+		echo esc_url( $src[0] );
+	}
+	die();
+}
+add_action( 'wp_ajax_illdy_get_attachment_media', 'illdy_get_attachment_image' );

@@ -38,6 +38,7 @@ abstract class PLL_Choose_Lang {
 
 		add_action( 'pre_comment_on_post', array( $this, 'pre_comment_on_post' ) ); // sets the language of comment
 		add_action( 'parse_query', array( $this, 'parse_main_query' ), 2 ); // sets the language in special cases
+		add_action( 'wp', array( $this, 'maybe_setcookie' ), 7 );
 	}
 
 	/**
@@ -59,8 +60,6 @@ abstract class PLL_Choose_Lang {
 		// see https://wordpress.org/support/topic/detect-browser-language-sometimes-setting-null-language
 		$this->curlang = ( $curlang instanceof PLL_Language ) ? $curlang : $this->model->get_language( $this->options['default_lang'] );
 
-		$this->maybe_setcookie();
-
 		$GLOBALS['text_direction'] = $this->curlang->is_rtl ? 'rtl' : 'ltr';
 
 		/**
@@ -80,10 +79,10 @@ abstract class PLL_Choose_Lang {
 	 *
 	 * @since 1.5
 	 */
-	protected function maybe_setcookie() {
+	public function maybe_setcookie() {
 		// check headers have not been sent to avoid ugly error
 		// cookie domain must be set to false for localhost ( default value for COOKIE_DOMAIN ) thanks to Stephen Harris.
-		if ( ! headers_sent() && PLL_COOKIE !== false && ( ! isset( $_COOKIE[ PLL_COOKIE ] ) || $_COOKIE[ PLL_COOKIE ] != $this->curlang->slug ) ) {
+		if ( ! headers_sent() && PLL_COOKIE !== false && ! empty( $this->curlang ) && ( ! isset( $_COOKIE[ PLL_COOKIE ] ) || $_COOKIE[ PLL_COOKIE ] != $this->curlang->slug ) && ! is_404() ) {
 
 			/**
 			 * Filter the Polylang cookie duration
@@ -99,7 +98,8 @@ abstract class PLL_Choose_Lang {
 				$this->curlang->slug,
 				time() + $expiration,
 				COOKIEPATH,
-				2 == $this->options['force_lang'] ? parse_url( $this->links_model->home, PHP_URL_HOST ) : COOKIE_DOMAIN
+				2 == $this->options['force_lang'] ? parse_url( $this->links_model->home, PHP_URL_HOST ) : COOKIE_DOMAIN,
+				is_ssl()
 			);
 		}
 	}
@@ -139,7 +139,7 @@ abstract class PLL_Choose_Lang {
 								$temp = $v[ $j ];
 								$v[ $j ] = $v[ $j + 1 ];
 								$v[ $j + 1 ] = $temp;
-								//swap keys
+								// Swap keys
 								$temp = $k[ $j ];
 								$k[ $j ] = $k[ $j + 1 ];
 								$k[ $j + 1 ] = $temp;
@@ -234,7 +234,7 @@ abstract class PLL_Choose_Lang {
 	public function home_requested() {
 		// we are already on the right page
 		if ( $this->options['default_lang'] == $this->curlang->slug && $this->options['hide_default'] ) {
-			$this->set_lang_query_var( $GLOBALS['wp_query'], $this->curlang );
+			$this->set_curlang_in_query( $GLOBALS['wp_query'] );
 
 			/**
 			 * Fires when the site root page is requested
@@ -300,7 +300,7 @@ abstract class PLL_Choose_Lang {
 		 */
 		if ( $lang = apply_filters( 'pll_set_language_from_query', false, $query ) ) {
 			$this->set_language( $lang );
-			$this->set_lang_query_var( $query, $this->curlang );
+			$this->set_curlang_in_query( $query );
 		}
 
 		// sets is_home on translated home page when it displays posts
@@ -315,18 +315,14 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * sets the language in query
-	 * optimized for ( needs ) WP 3.5+
+	 * Sets the current language in the query
 	 *
-	 * @since 1.3
+	 * @since 2.2
+	 *
+	 * @param object $query
 	 */
-	public function set_lang_query_var( &$query, $lang ) {
-		// defining directly the tax_query ( rather than setting 'lang' avoids transforming the query by WP )
-		$query->query_vars['tax_query'][] = array(
-			'taxonomy' => 'language',
-			'field'    => 'term_taxonomy_id', // since WP 3.5
-			'terms'    => $lang->term_taxonomy_id,
-			'operator' => 'IN',
-		);
+	protected function set_curlang_in_query( &$query ) {
+		$pll_query = new PLL_Query( $query, $this->model );
+		$pll_query->set_language( $this->curlang );
 	}
 }
